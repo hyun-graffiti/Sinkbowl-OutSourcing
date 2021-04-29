@@ -4,6 +4,8 @@ import styled from '@emotion/styled'
 type InputBoxProps = {
   title: string
   name: string
+  minValue: number
+  maxValue: number
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -11,15 +13,15 @@ const InputBoxWrapper = styled.div`
   width: 300px;
 
   & + & {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 `
 
 const Title = styled.div`
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 3px 0;
-  border-bottom: 1px solid grey;
-  font-size: 1.2rem;
+  color: #4c6ef5;
+  font-size: 1.15rem;
   font-weight: 700;
 `
 
@@ -36,16 +38,17 @@ const InputBlock = styled.div`
 const Input = styled.input`
   width: 120px;
   padding: 5px 10px;
-  border: 1px solid grey;
-  border-radius: 15px;
+  border: 0;
+  border-bottom: 2px solid #4c6ef5;
   font-size: 1rem;
-  text-align: center;
   outline: none;
 `
 
 const InputBox: FunctionComponent<InputBoxProps> = function ({
   title,
   name,
+  minValue,
+  maxValue,
   onChange,
 }) {
   return (
@@ -56,6 +59,7 @@ const InputBox: FunctionComponent<InputBoxProps> = function ({
           type="number"
           name={`${name}-min`}
           placeholder="최소값"
+          value={minValue}
           onChange={onChange}
         />
         <span>~</span>
@@ -63,6 +67,7 @@ const InputBox: FunctionComponent<InputBoxProps> = function ({
           type="number"
           name={`${name}-max`}
           placeholder="최대값"
+          value={maxValue}
           onChange={onChange}
         />
       </InputBlock>

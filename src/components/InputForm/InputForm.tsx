@@ -1,40 +1,72 @@
-import { ChangeEvent, useState, FunctionComponent } from 'react'
+import { ChangeEvent, Dispatch, FunctionComponent, SetStateAction } from 'react'
 import styled from '@emotion/styled'
+import { FormValueTypes } from 'components/App'
 import InputBox from 'components/InputBox'
 
-const InputFormWrapper = styled.div``
-
-type FormValueTypes = {
-  'width-min': number
-  'width-max': number
-  'height-min': number
-  'height-max': number
-  'size-min': number
-  'size-max': number
+type InputFormProps = {
+  formValue: FormValueTypes
+  setFormValue: Dispatch<SetStateAction<FormValueTypes>>
+  onButtonClick: () => void
 }
 
-const InputForm: FunctionComponent = function () {
-  const [value, setValue] = useState<FormValueTypes>({
-    'width-min': 0,
-    'width-max': 0,
-    'height-min': 0,
-    'height-max': 0,
-    'size-min': 0,
-    'size-max': 0,
-  })
+const InputFormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+`
 
-  console.log(value)
+const FormButton = styled.button`
+  margin-top: 30px;
+  padding: 8px 20px;
+  background: #4c6ef5;
+  border: none;
+  border-radius: 7px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
 
+  &:hover {
+    background: #3b5bdb;
+  }
+`
+
+const InputForm: FunctionComponent<InputFormProps> = function ({
+  formValue,
+  setFormValue,
+  onButtonClick,
+}) {
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
-    setValue((prev: FormValueTypes) => ({ ...prev, [name]: value }))
+    setFormValue((prev: FormValueTypes) => ({ ...prev, [name]: value }))
   }
 
   return (
     <InputFormWrapper>
-      <InputBox title="길이" name="width" onChange={onChange} />
-      <InputBox title="높이" name="height" onChange={onChange} />
-      <InputBox title="크기" name="size" onChange={onChange} />
+      <InputBox
+        title="길이"
+        name="width"
+        minValue={formValue['width-min']}
+        maxValue={formValue['width-max']}
+        onChange={onChange}
+      />
+      <InputBox
+        title="높이"
+        name="height"
+        minValue={formValue['height-min']}
+        maxValue={formValue['height-max']}
+        onChange={onChange}
+      />
+      <InputBox
+        title="크기"
+        name="size"
+        minValue={formValue['size-min']}
+        maxValue={formValue['size-max']}
+        onChange={onChange}
+      />
+
+      <FormButton onClick={onButtonClick}>꾸며보기</FormButton>
     </InputFormWrapper>
   )
 }
