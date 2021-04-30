@@ -17,7 +17,8 @@ const InputFormWrapper = styled.div`
 
 const FormButton = styled.button`
   margin-top: 30px;
-  padding: 8px 20px;
+  padding: 8px;
+  width: 100%;
   background: #4c6ef5;
   border: none;
   border-radius: 7px;
@@ -66,7 +67,9 @@ const InputForm: FunctionComponent<InputFormProps> = function ({
         onChange={onChange}
       />
 
-      <FormButton onClick={onButtonClick}>꾸며보기</FormButton>
+      <FormButton onClick={onButtonClick}>
+        사용 가능한 싱크볼 알아보기
+      </FormButton>
     </InputFormWrapper>
   )
 }

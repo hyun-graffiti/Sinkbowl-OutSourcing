@@ -27,8 +27,16 @@ const globalStyle = css`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 300px minmax(0, 1fr);
   grid-gap: 50px;
+`
+
+const PresenterBox = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 40px;
+  height: 300px;
+  margin-top: 50px;
 `
 
 const App: FunctionComponent = function () {
@@ -76,15 +84,22 @@ const App: FunctionComponent = function () {
   }
 
   return (
-    <Wrapper>
-      <Global styles={globalStyle} />
-      <InputForm
-        formValue={value}
-        setFormValue={setValue}
-        onButtonClick={onButtonClick}
-      />
-      <ImagePresenter sinkbowl={sinkbowl} />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Global styles={globalStyle} />
+        <InputForm
+          formValue={value}
+          setFormValue={setValue}
+          onButtonClick={onButtonClick}
+        />
+        <ImagePresenter sinkbowl={sinkbowl} />
+      </Wrapper>
+      <PresenterBox>
+        <ImagePresenter sinkbowl={sinkbowl} />
+        <ImagePresenter sinkbowl={sinkbowl} />
+        <ImagePresenter sinkbowl={sinkbowl} />
+      </PresenterBox>
+    </>
   )
 }
 
