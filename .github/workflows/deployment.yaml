@@ -13,10 +13,10 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies
-        run: yarn add
+        run: npm install
 
       - name: Build React Application
-        run: yarn build
+        run: npm run build
 
       - name: Deploy React Application to Surge
-        run: yarn run surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+        run: npm run surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
