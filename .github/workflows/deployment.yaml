@@ -12,11 +12,10 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Install Surge
-        run: npm install surge --global
+      - name: Install Dependencies and Surge
+        run: |
+          npm install
+          npm install surge --global
 
       - name: Build React Application
         run: npm run build
