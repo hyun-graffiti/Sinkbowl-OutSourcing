@@ -19,4 +19,4 @@ jobs:
         run: npm run build
 
       - name: Deploy React Application to Surge
-        run: npm run surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
