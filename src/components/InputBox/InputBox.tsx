@@ -20,7 +20,7 @@ const InputBoxWrapper = styled.div`
 const Title = styled.div`
   margin-bottom: 5px;
   padding: 3px 0;
-  color: #4c6ef5;
+  color: rgba(64, 64, 64, 1);
   font-size: 1.15rem;
   font-weight: 700;
 `
@@ -39,7 +39,7 @@ const Input = styled.input`
   width: 120px;
   padding: 5px 10px;
   border: 0;
-  border-bottom: 2px solid #4c6ef5;
+  border-bottom: 2px solid rgba(64, 64, 64, 1);
   font-size: 1rem;
   outline: none;
 `

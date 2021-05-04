@@ -19,7 +19,7 @@ const FormButton = styled.button`
   margin-top: 30px;
   padding: 8px;
   width: 100%;
-  background: #4c6ef5;
+  background: rgba(64, 64, 64, 1);
   border: none;
   border-radius: 7px;
   color: #ffffff;
@@ -29,7 +29,7 @@ const FormButton = styled.button`
   transition: background 0.15s;
 
   &:hover {
-    background: #3b5bdb;
+    background: rgba(0, 0, 0, 0.8);
   }
 `
 
