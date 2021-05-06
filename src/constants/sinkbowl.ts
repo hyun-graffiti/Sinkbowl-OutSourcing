@@ -1,15 +1,15 @@
-export type SinkbowlInfoType = {
+import { ImageViewerProps } from 'components/ImageViewer/ImageViewer'
+
+export type SinkbowlType = {
   'width-min': number
   'width-max': number
   'height-min': number
   'height-max': number
   'size-min': number
   'size-max': number
-  name: string
-  src: string
-}
+} & ImageViewerProps
 
-export const SinkbowlInfo: SinkbowlInfoType[] = [
+const Sinkbowl: SinkbowlType[] = [
   {
     'width-min': 10,
     'width-max': 40,
@@ -31,3 +31,5 @@ export const SinkbowlInfo: SinkbowlInfoType[] = [
     src: '/images/apple-2.png',
   },
 ]
+
+export default Sinkbowl

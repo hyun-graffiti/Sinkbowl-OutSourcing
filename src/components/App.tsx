@@ -1,9 +1,12 @@
-import { useState, FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { Global, css } from '@emotion/react'
-import { SinkbowlInfo, SinkbowlInfoType } from 'constants/sinkbowl-info'
+import useFilterSinkbowl from 'hooks/useFilterSinkbowl'
+import Faucet from 'constants/faucet'
+import Waterspout from 'constants/waterspout'
 import InputForm from 'components/InputForm'
 import ImagePresenter from 'components/ImagePresenter'
+import PreviewResult from 'components/PreviewResult'
 
 export type FormValueTypes = {
   'width-min': number
@@ -28,7 +31,7 @@ const globalStyle = css`
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
-  grid-gap: 50px;
+  grid-gap: 100px;
 `
 
 const PresenterBox = styled.div`
@@ -36,74 +39,33 @@ const PresenterBox = styled.div`
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 40px;
   height: 300px;
-  margin-top: 50px;
+  margin-top: 100px;
 `
 
 const App: FunctionComponent = function () {
-  const [value, setValue] = useState<FormValueTypes>({
-    'width-min': 0,
-    'width-max': 0,
-    'height-min': 0,
-    'height-max': 0,
-    'size-min': 0,
-    'size-max': 0,
-  })
-
-  const [sinkbowl, setSinkbowl] = useState<SinkbowlInfoType[]>(SinkbowlInfo)
-
-  const onButtonClick = () => {
-    const key = []
-
-    if (value['width-min'] >= value['width-max']) key.push('가로')
-    if (value['height-min'] >= value['height-max']) key.push('세로')
-    if (value['size-min'] >= value['size-max']) key.push('크기')
-
-    if (key.length !== 0) {
-      const wrongValue = key.join(', ')
-      alert(`${wrongValue}값을 올바르게 설정해주세요.`)
-      return
-    }
-
-    const filteredSinkbowl = SinkbowlInfo.filter(
-      (sinkbowl: SinkbowlInfoType) => {
-        const widthIsValid =
-          value['width-min'] <= sinkbowl['width-min'] &&
-          sinkbowl['width-max'] <= value['width-max']
-        const heightIsValid =
-          value['height-min'] <= sinkbowl['height-min'] &&
-          sinkbowl['height-max'] <= value['height-max']
-        const sizeIsValid =
-          value['size-min'] <= sinkbowl['size-min'] &&
-          sinkbowl['size-max'] <= value['size-max']
-
-        return widthIsValid && heightIsValid && sizeIsValid
-      },
-    )
-
-    setSinkbowl(filteredSinkbowl)
-  }
+  const {
+    formValue,
+    setFormValue,
+    filterSinkbowl,
+    sinkbowl,
+  } = useFilterSinkbowl()
 
   return (
     <>
       <Wrapper>
         <Global styles={globalStyle} />
         <InputForm
-          formValue={value}
-          setFormValue={setValue}
-          onButtonClick={onButtonClick}
+          formValue={formValue}
+          setFormValue={setFormValue}
+          onButtonClick={filterSinkbowl}
         />
-        <ImagePresenter sinkbowl={sinkbowl} />
+        <PreviewResult src="" />
       </Wrapper>
       <PresenterBox>
-        <ImagePresenter sinkbowl={sinkbowl} />
-        <ImagePresenter sinkbowl={sinkbowl} />
-        <ImagePresenter sinkbowl={sinkbowl} />
+        <ImagePresenter title="선택 가능 씽크볼" items={sinkbowl} />
+        <ImagePresenter title="선택 가능 수전" items={Faucet} />
+        <ImagePresenter title="선택 가능 배수구" items={Waterspout} />
       </PresenterBox>
-      <iframe
-        // class="sinkbowl-iframe"
-        src="http://parched-limit.surge.sh/"
-        frameBorder="0"
-      ></iframe>
     </>
   )
 }

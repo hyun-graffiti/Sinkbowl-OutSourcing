@@ -1,19 +1,36 @@
 import { useRef, FunctionComponent } from 'react'
 import styled from '@emotion/styled'
-import { SinkbowlInfoType } from 'constants/sinkbowl-info'
 import Slider, { Settings } from 'react-slick'
+import ImageViewer from 'components/ImageViewer'
+import { ImageViewerProps } from 'components/ImageViewer/ImageViewer'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 type ImagePresenterProps = {
-  sinkbowl: SinkbowlInfoType[]
+  title: string
+  items: ImageViewerProps[]
 }
 
 type PresenterArrowProps = {
   direction: 'right' | 'left'
 }
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`
+
+const Title = styled.div`
+  margin-bottom: 15px;
+  padding: 3px 0;
+  color: rgba(64, 64, 64, 1);
+  font-size: 1.15rem;
+  font-weight: 700;
+`
+
 const Presenter = styled.div`
+  flex: 1;
   width: 100%;
   position: relative;
 `
@@ -27,13 +44,14 @@ const PresenterArrow = styled.div<PresenterArrowProps>`
   z-index: 5;
   top: 0;
   ${({ direction }) => direction}: 0;
-  color: #4c6ef5;
+  color: rgba(64, 64, 64, 1);
   font-size: 1.3rem;
   cursor: pointer;
 `
 
 const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
-  sinkbowl,
+  title,
+  items,
 }) {
   const slider = useRef<Slider | null>(null)
 
@@ -46,7 +64,12 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
     slidesToScroll: 1,
   }
 
-  console.log(sinkbowl)
+  console.log(items)
+
+  const showPrevImage = (): void => {
+    if (slider.current === null) return
+    slider.current.slickPrev()
+  }
 
   const showNextImage = (): void => {
     if (slider.current === null) return
@@ -54,25 +77,22 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
   }
 
   return (
-    <Presenter>
-      <PresenterArrow onClick={showNextImage} direction="left">
-        ◀
-      </PresenterArrow>
-      <Slider {...settings} ref={slider}>
-        {/* {sinkbowl.map(({ name, src }: SinkbowlInfoType) => (
-        <div key={name}>
-          <div>{name}</div>
-          <img src={src} alt="image" />
-        </div>
-      ))} */}
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-      </Slider>
-      <PresenterArrow onClick={showNextImage} direction="right">
-        ▶
-      </PresenterArrow>
-    </Presenter>
+    <Wrapper>
+      <Title>{title}</Title>
+      <Presenter>
+        <PresenterArrow onClick={showPrevImage} direction="left">
+          ◀
+        </PresenterArrow>
+        <Slider {...settings} ref={slider}>
+          {items.map(({ name, src }: ImageViewerProps) => (
+            <ImageViewer name={name} src={src} key={name} />
+          ))}
+        </Slider>
+        <PresenterArrow onClick={showNextImage} direction="right">
+          ▶
+        </PresenterArrow>
+      </Presenter>
+    </Wrapper>
   )
 }
 
