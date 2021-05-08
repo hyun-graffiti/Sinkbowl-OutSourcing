@@ -1,4 +1,4 @@
-import { useRef, FunctionComponent } from 'react'
+import { useState, useRef, FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import Slider, { Settings } from 'react-slick'
 import ImageViewer from 'components/ImageViewer'
@@ -9,6 +9,7 @@ import 'slick-carousel/slick/slick-theme.css'
 type ImagePresenterProps = {
   title: string
   items: ImageViewerProps[]
+  afterChange: (presentImages: ImageViewerProps[]) => (current: number) => void
 }
 
 type PresenterArrowProps = {
@@ -52,8 +53,10 @@ const PresenterArrow = styled.div<PresenterArrowProps>`
 const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
   title,
   items,
+  afterChange,
 }) {
   const slider = useRef<Slider | null>(null)
+  const [presentImages] = useState<ImageViewerProps[]>(items)
 
   const settings: Settings = {
     dots: false,
@@ -62,9 +65,8 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    afterChange: afterChange(presentImages),
   }
-
-  console.log(items)
 
   const showPrevImage = (): void => {
     if (slider.current === null) return
@@ -84,7 +86,7 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
           ◀
         </PresenterArrow>
         <Slider {...settings} ref={slider}>
-          {items.map(({ name, src }: ImageViewerProps) => (
+          {presentImages.map(({ name, src }: ImageViewerProps) => (
             <ImageViewer name={name} src={src} key={name} />
           ))}
         </Slider>

@@ -16,7 +16,7 @@ const InputFormWrapper = styled.div`
 `
 
 const FormButton = styled.button`
-  margin-top: 30px;
+  margin-top: auto;
   padding: 8px;
   width: 100%;
   background: rgba(64, 64, 64, 1);

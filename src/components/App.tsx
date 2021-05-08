@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { Global, css } from '@emotion/react'
+import useDecorateResult from 'hooks/useDecorateResult'
 import useFilterSinkbowl from 'hooks/useFilterSinkbowl'
 import Faucet from 'constants/faucet'
 import Waterspout from 'constants/waterspout'
@@ -50,6 +51,8 @@ const App: FunctionComponent = function () {
     sinkbowl,
   } = useFilterSinkbowl()
 
+  const { decorateResult, afterChange } = useDecorateResult()
+
   return (
     <>
       <Wrapper>
@@ -59,12 +62,24 @@ const App: FunctionComponent = function () {
           setFormValue={setFormValue}
           onButtonClick={filterSinkbowl}
         />
-        <PreviewResult src="" />
+        <PreviewResult src={decorateResult} />
       </Wrapper>
       <PresenterBox>
-        <ImagePresenter title="선택 가능 씽크볼" items={sinkbowl} />
-        <ImagePresenter title="선택 가능 수전" items={Faucet} />
-        <ImagePresenter title="선택 가능 배수구" items={Waterspout} />
+        <ImagePresenter
+          title="선택 가능 씽크볼"
+          items={sinkbowl}
+          afterChange={afterChange('sinkbowl')}
+        />
+        <ImagePresenter
+          title="선택 가능 수전"
+          items={Faucet}
+          afterChange={afterChange('faucet')}
+        />
+        <ImagePresenter
+          title="선택 가능 배수구"
+          items={Waterspout}
+          afterChange={afterChange('waterspout')}
+        />
       </PresenterBox>
     </>
   )

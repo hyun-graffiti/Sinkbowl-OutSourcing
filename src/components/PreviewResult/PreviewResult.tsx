@@ -27,6 +27,10 @@ const Result = styled.div`
   color: rgba(64, 64, 64, 1);
   font-size: 1.5rem;
   font-weight: 700;
+
+  img {
+    height: 350px;
+  }
 `
 
 const PreviewResult: FunctionComponent<PreviewResultProps> = function ({
