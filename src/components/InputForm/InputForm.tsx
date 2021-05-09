@@ -60,10 +60,10 @@ const InputForm: FunctionComponent<InputFormProps> = function ({
         onChange={onChange}
       />
       <InputBox
-        title="크기"
-        name="size"
-        minValue={formValue['size-min']}
-        maxValue={formValue['size-max']}
+        title="두께"
+        name="thickness"
+        minValue={formValue['thickness-min']}
+        maxValue={formValue['thickness-max']}
         onChange={onChange}
       />
 

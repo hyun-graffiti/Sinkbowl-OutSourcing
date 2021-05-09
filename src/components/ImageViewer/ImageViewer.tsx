@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 
 export type ImageViewerProps = {
+  id: string
   name: string
   src: string
 }

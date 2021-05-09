@@ -14,8 +14,8 @@ export type FormValueTypes = {
   'width-max': number
   'height-min': number
   'height-max': number
-  'size-min': number
-  'size-max': number
+  'thickness-min': number
+  'thickness-max': number
 }
 
 const globalStyle = css`
@@ -51,7 +51,11 @@ const App: FunctionComponent = function () {
     sinkbowl,
   } = useFilterSinkbowl()
 
-  const { decorateResult, afterChange } = useDecorateResult()
+  const {
+    decorateResult,
+    afterChange,
+    setDecoratedSelectableItem,
+  } = useDecorateResult()
 
   return (
     <>
@@ -69,16 +73,19 @@ const App: FunctionComponent = function () {
           title="선택 가능 씽크볼"
           items={sinkbowl}
           afterChange={afterChange('sinkbowl')}
+          setDecoratedSelectableItem={setDecoratedSelectableItem('sinkbowl')}
         />
         <ImagePresenter
           title="선택 가능 수전"
           items={Faucet}
           afterChange={afterChange('faucet')}
+          setDecoratedSelectableItem={setDecoratedSelectableItem('faucet')}
         />
         <ImagePresenter
           title="선택 가능 배수구"
           items={Waterspout}
           afterChange={afterChange('waterspout')}
+          setDecoratedSelectableItem={setDecoratedSelectableItem('waterspout')}
         />
       </PresenterBox>
     </>

@@ -1,4 +1,4 @@
-import { useState, useRef, FunctionComponent } from 'react'
+import { useState, useEffect, useRef, FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import Slider, { Settings } from 'react-slick'
 import ImageViewer from 'components/ImageViewer'
@@ -10,6 +10,7 @@ type ImagePresenterProps = {
   title: string
   items: ImageViewerProps[]
   afterChange: (presentImages: ImageViewerProps[]) => (current: number) => void
+  setDecoratedSelectableItem: (id: string) => void
 }
 
 type PresenterArrowProps = {
@@ -54,9 +55,16 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
   title,
   items,
   afterChange,
+  setDecoratedSelectableItem,
 }) {
   const slider = useRef<Slider | null>(null)
-  const [presentImages] = useState<ImageViewerProps[]>(items)
+  const [presentImages, setPresentImages] = useState<ImageViewerProps[]>(items)
+
+  useEffect(() => {
+    setPresentImages(items)
+
+    if (items.length !== 0) setDecoratedSelectableItem(items[0].id)
+  }, [items])
 
   const settings: Settings = {
     dots: false,
@@ -86,8 +94,8 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
           ◀
         </PresenterArrow>
         <Slider {...settings} ref={slider}>
-          {presentImages.map(({ name, src }: ImageViewerProps) => (
-            <ImageViewer name={name} src={src} key={name} />
+          {presentImages.map(({ id, name, src }: ImageViewerProps) => (
+            <ImageViewer id={id} name={name} src={src} key={id} />
           ))}
         </Slider>
         <PresenterArrow onClick={showNextImage} direction="right">

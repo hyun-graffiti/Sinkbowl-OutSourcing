@@ -1,34 +1,27 @@
 import { ImageViewerProps } from 'components/ImageViewer/ImageViewer'
 
 export type SinkbowlType = {
-  'width-min': number
-  'width-max': number
-  'height-min': number
-  'height-max': number
-  'size-min': number
-  'size-max': number
+  width: number
+  height: number
+  thickness: number
 } & ImageViewerProps
 
 const Sinkbowl: SinkbowlType[] = [
   {
-    'width-min': 10,
-    'width-max': 40,
-    'height-min': 10,
-    'height-max': 40,
-    'size-min': 10,
-    'size-max': 40,
-    name: '사과 1',
-    src: '/images/apple-1.png',
+    id: 'sinkbowl-1',
+    width: 500,
+    height: 500,
+    thickness: 0.6,
+    name: '엠보 WDS500 / 배수구포함',
+    src: '/images/sinkbowl/sinkbowl-1.jpg',
   },
   {
-    'width-min': 40,
-    'width-max': 80,
-    'height-min': 40,
-    'height-max': 80,
-    'size-min': 40,
-    'size-max': 80,
-    name: '사과 2',
-    src: '/images/apple-2.png',
+    id: 'sinkbowl-2',
+    width: 850,
+    height: 515,
+    thickness: 0.6,
+    name: '엠보 FDS850 SET (악세사리+배수구)',
+    src: '/images/sinkbowl/sinkbowl-2.jpg',
   },
 ]
 
