@@ -7,8 +7,6 @@ type FormValueType = {
   'width-max': number
   'height-min': number
   'height-max': number
-  'thickness-min': number
-  'thickness-max': number
 }
 
 type useFilterSinkbowlType = {
@@ -24,8 +22,6 @@ export default function useFilterSinkbowl(): useFilterSinkbowlType {
     'width-max': 0,
     'height-min': 0,
     'height-max': 0,
-    'thickness-min': 0,
-    'thickness-max': 0,
   })
 
   const [sinkbowl, setSinkbowl] = useState<SinkbowlType[]>(Sinkbowl)
@@ -35,8 +31,6 @@ export default function useFilterSinkbowl(): useFilterSinkbowlType {
 
     if (formValue['width-min'] > formValue['width-max']) key.push('가로')
     if (formValue['height-min'] > formValue['height-max']) key.push('세로')
-    if (formValue['thickness-min'] > formValue['thickness-max'])
-      key.push('크기')
 
     if (key.length !== 0) {
       const wrongValue = key.join(', ')
@@ -45,7 +39,7 @@ export default function useFilterSinkbowl(): useFilterSinkbowlType {
     }
 
     const sizeIsValid = (
-      name: 'width' | 'height' | 'thickness',
+      name: 'width' | 'height',
       sinkbowl: SinkbowlType,
     ): boolean =>
       formValue[`${name}-min`] - 10 <= sinkbowl[name] &&

@@ -16,7 +16,7 @@ const InputFormWrapper = styled.div`
 `
 
 const FormButton = styled.button`
-  margin-top: auto;
+  margin-top: 50px;
   padding: 8px;
   width: 100%;
   background: rgba(64, 64, 64, 1);
@@ -57,13 +57,6 @@ const InputForm: FunctionComponent<InputFormProps> = function ({
         name="height"
         minValue={formValue['height-min']}
         maxValue={formValue['height-max']}
-        onChange={onChange}
-      />
-      <InputBox
-        title="두께"
-        name="thickness"
-        minValue={formValue['thickness-min']}
-        maxValue={formValue['thickness-max']}
         onChange={onChange}
       />
 

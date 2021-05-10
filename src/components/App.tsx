@@ -14,8 +14,6 @@ export type FormValueTypes = {
   'width-max': number
   'height-min': number
   'height-max': number
-  'thickness-min': number
-  'thickness-max': number
 }
 
 const globalStyle = css`
