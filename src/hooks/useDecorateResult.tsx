@@ -25,8 +25,8 @@ export default function useDecorateResult(): useDecorateResultType {
     setSelectableItem,
   ] = useState<SelectableItem>({
     sinkbowl: '',
-    faucet: 'f1',
-    waterspout: 'w1',
+    faucet: '268',
+    waterspout: '',
   })
 
   const [decorateResult, setDecorateResult] = useState<string>('')
@@ -42,7 +42,7 @@ export default function useDecorateResult(): useDecorateResultType {
 
   useEffect(() => {
     if (sinkbowl === '' || faucet === '' || waterspout === '') return
-    setDecorateResult(`/images/result/${sinkbowl}_${faucet}_${waterspout}.jpg`)
+    setDecorateResult(`/images/${sinkbowl}_${faucet}_${waterspout}.jpg`)
   }, [sinkbowl, faucet, waterspout])
 
   return { decorateResult, afterChange, setDecoratedSelectableItem }

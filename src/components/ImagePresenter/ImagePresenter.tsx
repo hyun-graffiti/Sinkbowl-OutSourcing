@@ -9,7 +9,9 @@ import 'slick-carousel/slick/slick-theme.css'
 export type ImageType = {
   id: string
   name: string
+  price: string
   src: string
+  link: string
 }
 
 type ImagePresenterProps = {
@@ -23,7 +25,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 430px;
+  height: 450px;
   padding: 15px;
   box-shadow: 0 0 8px rgba(64, 64, 64, 0.25);
   border-radius: 15px;
@@ -125,9 +127,18 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
             </PrevImageIcon>
 
             <Slider {...settings} ref={slider}>
-              {presentImages.map(({ id, name, src }: ImageType) => (
-                <ImageViewer id={id} name={name} src={src} key={id} />
-              ))}
+              {presentImages.map(
+                ({ id, name, price, src, link }: ImageType) => (
+                  <ImageViewer
+                    id={id}
+                    name={name}
+                    price={price}
+                    src={src}
+                    link={link}
+                    key={id}
+                  />
+                ),
+              )}
             </Slider>
 
             <NextImageIcon onClick={showNextImage}>
