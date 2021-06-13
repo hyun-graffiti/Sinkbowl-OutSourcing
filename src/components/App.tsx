@@ -9,13 +9,6 @@ import InputForm from 'components/InputForm'
 import ImagePresenter from 'components/ImagePresenter'
 import PreviewResult from 'components/PreviewResult'
 
-export type FormValueTypes = {
-  'width-min': number
-  'width-max': number
-  'height-min': number
-  'height-max': number
-}
-
 const globalStyle = css`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
@@ -28,16 +21,17 @@ const globalStyle = css`
 `
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  grid-gap: 100px;
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
 `
 
 const PresenterBox = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-gap: 40px;
-  height: 300px;
+  grid-gap: 50px;
+  width: 1200px;
+  margin: 0 auto;
   margin-top: 100px;
 `
 
@@ -57,8 +51,8 @@ const App: FunctionComponent = function () {
 
   return (
     <>
+      <Global styles={globalStyle} />
       <Wrapper>
-        <Global styles={globalStyle} />
         <InputForm
           formValue={formValue}
           setFormValue={setFormValue}
@@ -68,19 +62,19 @@ const App: FunctionComponent = function () {
       </Wrapper>
       <PresenterBox>
         <ImagePresenter
-          title="선택 가능 씽크볼"
+          title="싱크볼 목록"
           items={sinkbowl}
           afterChange={afterChange('sinkbowl')}
           setDecoratedSelectableItem={setDecoratedSelectableItem('sinkbowl')}
         />
         <ImagePresenter
-          title="선택 가능 수전"
+          title="수전 목록"
           items={Faucet}
           afterChange={afterChange('faucet')}
           setDecoratedSelectableItem={setDecoratedSelectableItem('faucet')}
         />
         <ImagePresenter
-          title="선택 가능 배수구"
+          title="배수구 목록"
           items={Waterspout}
           afterChange={afterChange('waterspout')}
           setDecoratedSelectableItem={setDecoratedSelectableItem('waterspout')}

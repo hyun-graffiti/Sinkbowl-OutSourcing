@@ -1,9 +1,9 @@
-import { ImageViewerProps } from 'components/ImageViewer/ImageViewer'
+import { ImageType } from 'components/ImagePresenter/ImagePresenter'
 
 export type SinkbowlType = {
   width: number
   height: number
-} & ImageViewerProps
+} & ImageType
 
 const generateImageSrc = (id: number): string =>
   `/images/sinkbowl/sinkbowl-${id}.jpg`

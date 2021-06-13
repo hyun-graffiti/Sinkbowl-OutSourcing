@@ -1,8 +1,8 @@
-import { ImageViewerProps } from 'components/ImageViewer/ImageViewer'
+import { ImageType } from 'components/ImagePresenter/ImagePresenter'
 
 const generateImageSrc = (index: number) => `/images/faucet/faucet-${index}.jpg`
 
-const Waterspout: ImageViewerProps[] = [
+const Waterspout: ImageType[] = [
   {
     id: 'waterspout-1',
     name: '배수구 1',

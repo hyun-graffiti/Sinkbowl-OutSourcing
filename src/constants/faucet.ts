@@ -1,8 +1,8 @@
-import { ImageViewerProps } from 'components/ImageViewer/ImageViewer'
+import { ImageType } from 'components/ImagePresenter/ImagePresenter'
 
 const generateImageSrc = (index: number) => `/images/faucet/faucet-${index}.jpg`
 
-const Faucet: ImageViewerProps[] = [
+const Faucet: ImageType[] = [
   {
     id: 'faucet-1',
     name: '백조씽크 / BF-D4000',

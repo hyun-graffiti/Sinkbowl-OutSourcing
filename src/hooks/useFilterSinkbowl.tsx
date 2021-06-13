@@ -1,12 +1,9 @@
 import { Dispatch, SetStateAction, useState } from 'react'
 import Sinkbowl, { SinkbowlType } from 'constants/sinkbowl'
 
-type FormValueType = {
-  [key: string]: number
-  'width-min': number
-  'width-max': number
-  'height-min': number
-  'height-max': number
+export type FormValueType = {
+  width: string
+  height: string
 }
 
 type useFilterSinkbowlType = {
@@ -18,32 +15,24 @@ type useFilterSinkbowlType = {
 
 export default function useFilterSinkbowl(): useFilterSinkbowlType {
   const [formValue, setFormValue] = useState<FormValueType>({
-    'width-min': 0,
-    'width-max': 0,
-    'height-min': 0,
-    'height-max': 0,
+    width: '',
+    height: '',
   })
 
-  const [sinkbowl, setSinkbowl] = useState<SinkbowlType[]>(Sinkbowl)
+  const [sinkbowl, setSinkbowl] = useState<SinkbowlType[]>([])
 
   const filterSinkbowl = () => {
-    const key = []
+    const { width, height } = formValue
 
-    if (formValue['width-min'] > formValue['width-max']) key.push('가로')
-    if (formValue['height-min'] > formValue['height-max']) key.push('세로')
-
-    if (key.length !== 0) {
-      const wrongValue = key.join(', ')
-      alert(`${wrongValue}값을 올바르게 설정해주세요.`)
+    if (width === '' || height === '') {
+      alert('가로, 세로 값을 올바르게 입력해주세요.')
       return
     }
 
     const sizeIsValid = (
-      name: 'width' | 'height',
+      name: keyof typeof formValue,
       sinkbowl: SinkbowlType,
-    ): boolean =>
-      formValue[`${name}-min`] - 10 <= sinkbowl[name] &&
-      sinkbowl[name] <= formValue[`${name}-max`] + 10
+    ): boolean => Math.abs(parseInt(formValue[name]) - sinkbowl[name]) <= 10
 
     const filteredSinkbowl = Sinkbowl.filter(
       (sinkbowl: SinkbowlType) =>
