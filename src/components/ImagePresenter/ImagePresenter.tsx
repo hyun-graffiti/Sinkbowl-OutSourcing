@@ -19,6 +19,7 @@ type ImagePresenterProps = {
   items: ImageType[]
   afterChange: (presentImages: ImageType[]) => (current: number) => void
   setDecoratedSelectableItem: (id: string) => void
+  isFirst?: boolean
 }
 
 const Wrapper = styled.div`
@@ -86,6 +87,7 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
   items,
   afterChange,
   setDecoratedSelectableItem,
+  isFirst,
 }) {
   const slider = useRef<Slider | null>(null)
   const [presentImages, setPresentImages] = useState<ImageType[]>(items)
@@ -94,6 +96,7 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
     setPresentImages(items)
 
     if (items.length !== 0) setDecoratedSelectableItem(items[0].id)
+    else setDecoratedSelectableItem('')
   }, [items])
 
   const settings: Settings = {
@@ -114,6 +117,40 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
   const showNextImage = (): void => {
     if (slider.current === null) return
     slider.current.slickNext()
+  }
+
+  if (isFirst !== undefined && presentImages.length === 0) {
+    if (!isFirst) {
+      return (
+        <Wrapper>
+          <Title>{title}</Title>
+          <Presenter>
+            <Info>
+              입력하신 조건에
+              <br />
+              맞는 싱크볼을
+              <br />
+              찾을 수 없습니다.
+            </Info>
+          </Presenter>
+        </Wrapper>
+      )
+    } else {
+      return (
+        <Wrapper>
+          <Title>{title}</Title>
+          <Presenter>
+            <Info>
+              상단의 도움말에 따라
+              <br />
+              사용 가능한 싱크볼을
+              <br />
+              필터링해주세요.
+            </Info>
+          </Presenter>
+        </Wrapper>
+      )
+    }
   }
 
   return (

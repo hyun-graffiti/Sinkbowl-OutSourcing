@@ -25,7 +25,7 @@ export default function useDecorateResult(): useDecorateResultType {
     setSelectableItem,
   ] = useState<SelectableItem>({
     sinkbowl: '',
-    faucet: '268',
+    faucet: '',
     waterspout: '',
   })
 
@@ -41,7 +41,10 @@ export default function useDecorateResult(): useDecorateResultType {
     setDecoratedSelectableItem(item)(presentImages[current].id)
 
   useEffect(() => {
-    if (sinkbowl === '' || faucet === '' || waterspout === '') return
+    if (sinkbowl === '' || faucet === '' || waterspout === '') {
+      setDecorateResult('')
+      return
+    }
     setDecorateResult(`/images/${sinkbowl}_${faucet}_${waterspout}.jpg`)
   }, [sinkbowl, faucet, waterspout])
 

@@ -11,6 +11,7 @@ type useFilterSinkbowlType = {
   setFormValue: Dispatch<SetStateAction<FormValueType>>
   filterSinkbowl: () => void
   sinkbowl: SinkbowlType[]
+  isFirst: boolean
 }
 
 export default function useFilterSinkbowl(): useFilterSinkbowlType {
@@ -20,6 +21,7 @@ export default function useFilterSinkbowl(): useFilterSinkbowlType {
   })
 
   const [sinkbowl, setSinkbowl] = useState<SinkbowlType[]>([])
+  const [isFirst, setIsFirst] = useState<boolean>(true)
 
   const filterSinkbowl = () => {
     const { width, height } = formValue
@@ -40,7 +42,8 @@ export default function useFilterSinkbowl(): useFilterSinkbowlType {
     )
 
     setSinkbowl(filteredSinkbowl)
+    setIsFirst(false)
   }
 
-  return { formValue, setFormValue, filterSinkbowl, sinkbowl }
+  return { formValue, setFormValue, filterSinkbowl, sinkbowl, isFirst }
 }

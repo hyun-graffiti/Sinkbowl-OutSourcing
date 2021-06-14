@@ -41,6 +41,7 @@ const App: FunctionComponent = function () {
     setFormValue,
     filterSinkbowl,
     sinkbowl,
+    isFirst,
   } = useFilterSinkbowl()
 
   const {
@@ -66,6 +67,7 @@ const App: FunctionComponent = function () {
           items={sinkbowl}
           afterChange={afterChange('sinkbowl')}
           setDecoratedSelectableItem={setDecoratedSelectableItem('sinkbowl')}
+          isFirst={isFirst}
         />
         <ImagePresenter
           title="수전 목록"
