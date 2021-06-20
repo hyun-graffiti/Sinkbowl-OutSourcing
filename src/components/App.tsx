@@ -63,23 +63,29 @@ const App: FunctionComponent = function () {
       </Wrapper>
       <PresenterBox>
         <ImagePresenter
+          name="sinkbowl"
           title="싱크볼 목록"
           items={sinkbowl}
           afterChange={afterChange('sinkbowl')}
           setDecoratedSelectableItem={setDecoratedSelectableItem('sinkbowl')}
           isFirst={isFirst}
+          selectBox={false}
         />
         <ImagePresenter
+          name="faucet"
           title="수전 목록"
           items={Faucet}
           afterChange={afterChange('faucet')}
           setDecoratedSelectableItem={setDecoratedSelectableItem('faucet')}
+          selectBox
         />
         <ImagePresenter
+          name="waterspout"
           title="배수구 목록"
           items={Waterspout}
           afterChange={afterChange('waterspout')}
           setDecoratedSelectableItem={setDecoratedSelectableItem('waterspout')}
+          selectBox
         />
       </PresenterBox>
     </>

@@ -1,4 +1,11 @@
-import { useState, useEffect, useRef, FunctionComponent } from 'react'
+import {
+  useState,
+  useEffect,
+  useRef,
+  FunctionComponent,
+  ChangeEvent,
+  MutableRefObject,
+} from 'react'
 import styled from '@emotion/styled'
 import Slider, { Settings } from 'react-slick'
 import ImageViewer from 'components/ImageViewer'
@@ -15,11 +22,13 @@ export type ImageType = {
 }
 
 type ImagePresenterProps = {
+  name: 'sinkbowl' | 'faucet' | 'waterspout'
   title: string
   items: ImageType[]
   afterChange: (presentImages: ImageType[]) => (current: number) => void
   setDecoratedSelectableItem: (id: string) => void
   isFirst?: boolean
+  selectBox: boolean
 }
 
 const Wrapper = styled.div`
@@ -50,7 +59,7 @@ const Presenter = styled.div`
 
 const NextImageIcon = styled.div`
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 0;
   transform: translateY(-50%);
   z-index: 10;
@@ -61,7 +70,7 @@ const NextImageIcon = styled.div`
 
 const PrevImageIcon = styled.div`
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   transform: translateY(-50%);
   z-index: 10;
@@ -82,15 +91,30 @@ const Info = styled.div`
   line-height: 1.5;
 `
 
+const SelectBox = styled.label`
+  display: flex;
+  align-items: center;
+  margin: auto auto 0;
+  font-size: 0.9rem;
+
+  input {
+    margin-top: 1px;
+    margin-right: 5px;
+  }
+`
+
 const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
+  name,
   title,
   items,
   afterChange,
   setDecoratedSelectableItem,
   isFirst,
+  selectBox,
 }) {
   const slider = useRef<Slider | null>(null)
   const [presentImages, setPresentImages] = useState<ImageType[]>(items)
+  const [isNotSelect, setIsNotSelect] = useState<boolean>(false)
 
   useEffect(() => {
     setPresentImages(items)
@@ -99,6 +123,57 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
     else setDecoratedSelectableItem('')
   }, [items])
 
+  const handleChangeCheckbox = ({
+    target: { checked },
+  }: ChangeEvent<HTMLInputElement>) => setIsNotSelect(checked)
+
+  return (
+    <Wrapper>
+      <Title>{title}</Title>
+
+      <Contents
+        name={name}
+        presentImages={presentImages}
+        isFirst={isFirst}
+        isNotSelect={isNotSelect}
+        slider={slider}
+        afterChange={afterChange}
+      />
+
+      {selectBox && (
+        <SelectBox>
+          <input
+            type="checkbox"
+            checked={isNotSelect}
+            onChange={handleChangeCheckbox}
+          />
+          <p>
+            선택안함 (
+            {name === 'faucet' ? '직접구매/설치비무료' : '기본배수구 무료설치'})
+          </p>
+        </SelectBox>
+      )}
+    </Wrapper>
+  )
+}
+
+type ContentsProps = {
+  name: 'sinkbowl' | 'faucet' | 'waterspout'
+  presentImages: ImageType[]
+  isFirst?: boolean
+  isNotSelect: boolean
+  slider: MutableRefObject<Slider | null>
+  afterChange: (presentImages: ImageType[]) => (current: number) => void
+}
+
+const Contents: FunctionComponent<ContentsProps> = function ({
+  name,
+  presentImages,
+  isFirst,
+  isNotSelect,
+  slider,
+  afterChange,
+}) {
   const settings: Settings = {
     dots: false,
     arrows: false,
@@ -119,70 +194,22 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
     slider.current.slickNext()
   }
 
-  if (isFirst !== undefined && presentImages.length === 0) {
-    if (!isFirst) {
+  if (name === 'sinkbowl' && presentImages.length === 0) {
+    if (isFirst) {
       return (
-        <Wrapper>
-          <Title>{title}</Title>
-          <Presenter>
-            <Info>
-              입력하신 조건에
-              <br />
-              맞는 싱크볼을
-              <br />
-              찾을 수 없습니다.
-            </Info>
-          </Presenter>
-        </Wrapper>
+        <Presenter>
+          <Info>
+            입력하신 조건에
+            <br />
+            맞는 싱크볼을
+            <br />
+            찾을 수 없습니다.
+          </Info>
+        </Presenter>
       )
     } else {
       return (
-        <Wrapper>
-          <Title>{title}</Title>
-          <Presenter>
-            <Info>
-              상단의 도움말에 따라
-              <br />
-              사용 가능한 싱크볼을
-              <br />
-              필터링해주세요.
-            </Info>
-          </Presenter>
-        </Wrapper>
-      )
-    }
-  }
-
-  return (
-    <Wrapper>
-      <Title>{title}</Title>
-      <Presenter>
-        {presentImages.length !== 0 ? (
-          <>
-            <PrevImageIcon onClick={showPrevImage}>
-              <MdKeyboardArrowLeft />
-            </PrevImageIcon>
-
-            <Slider {...settings} ref={slider}>
-              {presentImages.map(
-                ({ id, name, price, src, link }: ImageType) => (
-                  <ImageViewer
-                    id={id}
-                    name={name}
-                    price={price}
-                    src={src}
-                    link={link}
-                    key={id}
-                  />
-                ),
-              )}
-            </Slider>
-
-            <NextImageIcon onClick={showNextImage}>
-              <MdKeyboardArrowRight />
-            </NextImageIcon>
-          </>
-        ) : (
+        <Presenter>
           <Info>
             상단의 도움말에 따라
             <br />
@@ -190,10 +217,60 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
             <br />
             필터링해주세요.
           </Info>
-        )}
+        </Presenter>
+      )
+    }
+  }
+
+  if (isNotSelect)
+    return (
+      <Presenter>
+        <Info>
+          선택안함 옵션을
+          <br />
+          선택하셨습니다.
+        </Info>
       </Presenter>
-    </Wrapper>
-  )
+    )
+
+  if (presentImages.length !== 0) {
+    return (
+      <Presenter>
+        <PrevImageIcon onClick={showPrevImage}>
+          <MdKeyboardArrowLeft />
+        </PrevImageIcon>
+
+        <Slider {...settings} ref={slider}>
+          {presentImages.map(({ id, name, price, src, link }: ImageType) => (
+            <ImageViewer
+              id={id}
+              name={name}
+              price={price}
+              src={src}
+              link={link}
+              key={id}
+            />
+          ))}
+        </Slider>
+
+        <NextImageIcon onClick={showNextImage}>
+          <MdKeyboardArrowRight />
+        </NextImageIcon>
+      </Presenter>
+    )
+  } else {
+    return (
+      <Presenter>
+        <Info>
+          상단의 도움말에 따라
+          <br />
+          사용 가능한 싱크볼을
+          <br />
+          필터링해주세요.
+        </Info>
+      </Presenter>
+    )
+  }
 }
 
 export default ImagePresenter
