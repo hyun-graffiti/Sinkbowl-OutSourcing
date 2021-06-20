@@ -10,8 +10,8 @@ const Wrapper = styled.div`
   align-items: center;
 
   img {
-    width: 100%;
-    height: 270px;
+    width: 80%;
+    aspect-ratio: 1;
     object-fit: contain;
   }
 `

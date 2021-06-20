@@ -34,11 +34,15 @@ type ImagePresenterProps = {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 450px;
   padding: 15px;
   box-shadow: 0 0 8px rgba(64, 64, 64, 0.25);
   border-radius: 15px;
+
+  @media (max-width: 768px) {
+    & + & {
+      margin-top: 30px;
+    }
+  }
 `
 
 const Title = styled.div`
@@ -49,6 +53,10 @@ const Title = styled.div`
   font-size: 1.15rem;
   font-weight: 700;
   text-align: center;
+
+  @media (max-width: 992px) {
+    font-size: 0.9rem;
+  }
 `
 
 const Presenter = styled.div`
@@ -59,8 +67,8 @@ const Presenter = styled.div`
 
 const NextImageIcon = styled.div`
   position: absolute;
-  top: 40%;
-  right: 0;
+  top: 45%;
+  right: -7px;
   transform: translateY(-50%);
   z-index: 10;
   font-size: 2rem;
@@ -70,8 +78,8 @@ const NextImageIcon = styled.div`
 
 const PrevImageIcon = styled.div`
   position: absolute;
-  top: 40%;
-  left: 0;
+  top: 45%;
+  left: -7px;
   transform: translateY(-50%);
   z-index: 10;
   font-size: 2rem;
@@ -91,15 +99,24 @@ const Info = styled.div`
   line-height: 1.5;
 `
 
-const SelectBox = styled.label`
+const SelectBox = styled.label<{ selectBox: boolean }>`
   display: flex;
   align-items: center;
-  margin: auto auto 0;
+  margin: 20px auto 0;
   font-size: 0.9rem;
+  visibility: ${({ selectBox }) => (selectBox ? 'visible' : 'hidden')};
 
   input {
     margin-top: 1px;
     margin-right: 5px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    display: ${({ selectBox }) => (selectBox ? 'flex' : 'none')};
   }
 `
 
@@ -140,19 +157,17 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
         afterChange={afterChange}
       />
 
-      {selectBox && (
-        <SelectBox>
-          <input
-            type="checkbox"
-            checked={isNotSelect}
-            onChange={handleChangeCheckbox}
-          />
-          <p>
-            선택안함 (
-            {name === 'faucet' ? '직접구매/설치비무료' : '기본배수구 무료설치'})
-          </p>
-        </SelectBox>
-      )}
+      <SelectBox selectBox={selectBox}>
+        <input
+          type="checkbox"
+          checked={isNotSelect}
+          onChange={handleChangeCheckbox}
+        />
+        <p>
+          선택안함 (
+          {name === 'faucet' ? '직접구매/설치비무료' : '기본배수구 무료설치'})
+        </p>
+      </SelectBox>
     </Wrapper>
   )
 }

@@ -9,17 +9,31 @@ type InputFormProps = {
 }
 
 const InputFormWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
-const HeightInput = styled.input`
-  position: absolute;
-  top: 250px;
-  left: calc(50% - 500px);
-  transform: translate(-50%, -50%);
-  width: 100px;
+const InputWrapper = styled.div`
+  display: flex;
+
+  input + input {
+    margin-left: 30px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+  }
+`
+
+const Input = styled.input`
+  width: 150px;
   padding: 5px 10px;
   border: 0;
   border-bottom: 2px solid rgba(64, 64, 64, 1);
@@ -33,36 +47,14 @@ const HeightInput = styled.input`
     -webkit-appearance: none;
     margin: 0;
   }
-`
 
-const WidthInput = styled.input`
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  width: 100px;
-  padding: 5px 10px;
-  border: 0;
-  border-bottom: 2px solid rgba(64, 64, 64, 1);
-  font-size: 1rem;
-  font-weight: 800;
-  text-align: center;
-  outline: none;
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  @media (max-width: 768px) {
+    flex: 1;
   }
 `
 
 const FormButton = styled.button`
-  position: absolute;
-  top: 250px;
-  right: calc(50% - 520px);
-  transform: translate(50%, -50%);
-  padding: 8px;
-  width: 130px;
+  padding: 8px 20px;
   background: rgba(64, 64, 64, 1);
   border: none;
   border-radius: 7px;
@@ -74,6 +66,11 @@ const FormButton = styled.button`
 
   &:hover {
     background: rgba(0, 0, 0, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 30px;
   }
 `
 
@@ -89,27 +86,27 @@ const InputForm: FunctionComponent<InputFormProps> = function ({
 
   return (
     <InputFormWrapper>
-      <HeightInput
-        type="number"
-        min="0"
-        name="height"
-        placeholder="세로 길이"
-        value={height}
-        onChange={onChange}
-      />
-      <WidthInput
-        type="number"
-        min="0"
-        name="width"
-        placeholder="가로 길이"
-        value={width}
-        onChange={onChange}
-      />
+      <InputWrapper>
+        <Input
+          type="number"
+          min="0"
+          name="width"
+          placeholder="가로 길이 입력"
+          value={width}
+          onChange={onChange}
+        />
+        <Input
+          type="number"
+          min="0"
+          name="height"
+          placeholder="세로 길이 입력"
+          value={height}
+          onChange={onChange}
+        />
+      </InputWrapper>
 
       <FormButton onClick={onButtonClick}>
-        사용 가능한
-        <br />
-        싱크볼 알아보기
+        사용 가능한 싱크볼 알아보기
       </FormButton>
     </InputFormWrapper>
   )

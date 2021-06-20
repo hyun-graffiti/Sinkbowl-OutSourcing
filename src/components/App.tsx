@@ -7,7 +7,7 @@ import Faucet from 'constants/faucet'
 import Waterspout from 'constants/waterspout'
 import InputForm from 'components/InputForm'
 import ImagePresenter from 'components/ImagePresenter'
-import PreviewResult from 'components/PreviewResult'
+import StepGuide from 'components/StepGuide'
 
 const globalStyle = css`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
@@ -18,21 +18,25 @@ const globalStyle = css`
     box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
   }
-`
 
-const Wrapper = styled.div`
-  width: 1200px;
-  height: 600px;
-  margin: 0 auto;
+  #root {
+    max-width: 1250px;
+  }
 `
 
 const PresenterBox = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 50px;
-  width: 1200px;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 80px;
+
+  @media (max-width: 992px) {
+    grid-gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `
 
 const App: FunctionComponent = function () {
@@ -44,23 +48,17 @@ const App: FunctionComponent = function () {
     isFirst,
   } = useFilterSinkbowl()
 
-  const {
-    decorateResult,
-    afterChange,
-    setDecoratedSelectableItem,
-  } = useDecorateResult()
+  const { afterChange, setDecoratedSelectableItem } = useDecorateResult()
 
   return (
     <>
       <Global styles={globalStyle} />
-      <Wrapper>
-        <InputForm
-          formValue={formValue}
-          setFormValue={setFormValue}
-          onButtonClick={filterSinkbowl}
-        />
-        <PreviewResult src={decorateResult} />
-      </Wrapper>
+      <StepGuide />
+      <InputForm
+        formValue={formValue}
+        setFormValue={setFormValue}
+        onButtonClick={filterSinkbowl}
+      />
       <PresenterBox>
         <ImagePresenter
           name="sinkbowl"

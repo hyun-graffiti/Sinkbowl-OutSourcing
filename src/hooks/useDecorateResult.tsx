@@ -1,5 +1,5 @@
 import { ImageType } from 'components/ImagePresenter/ImagePresenter'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 type SelectableItem = {
   sinkbowl: string
@@ -10,7 +10,7 @@ type SelectableItem = {
 type AfterChangeParameter = 'sinkbowl' | 'faucet' | 'waterspout'
 
 type useDecorateResultType = {
-  decorateResult: string
+  selectableItem: SelectableItem
   afterChange: (
     item: AfterChangeParameter,
   ) => (presentImages: ImageType[]) => (current: number) => void
@@ -20,16 +20,11 @@ type useDecorateResultType = {
 }
 
 export default function useDecorateResult(): useDecorateResultType {
-  const [
-    { sinkbowl, faucet, waterspout },
-    setSelectableItem,
-  ] = useState<SelectableItem>({
+  const [selectableItem, setSelectableItem] = useState<SelectableItem>({
     sinkbowl: '',
     faucet: '',
     waterspout: '',
   })
-
-  const [decorateResult, setDecorateResult] = useState<string>('')
 
   const setDecoratedSelectableItem = (item: AfterChangeParameter) => (
     id: string,
@@ -40,13 +35,5 @@ export default function useDecorateResult(): useDecorateResultType {
   ) => (current: number) =>
     setDecoratedSelectableItem(item)(presentImages[current].id)
 
-  useEffect(() => {
-    if (sinkbowl === '' || faucet === '' || waterspout === '') {
-      setDecorateResult('')
-      return
-    }
-    setDecorateResult(`/images/${sinkbowl}_${faucet}_${waterspout}.jpg`)
-  }, [sinkbowl, faucet, waterspout])
-
-  return { decorateResult, afterChange, setDecoratedSelectableItem }
+  return { selectableItem, afterChange, setDecoratedSelectableItem }
 }
