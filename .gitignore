@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Theia
 /.theia
+
+# Environment
+.env

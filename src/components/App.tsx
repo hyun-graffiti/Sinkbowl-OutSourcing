@@ -8,6 +8,7 @@ import Waterspout from 'constants/waterspout'
 import InputForm from 'components/InputForm'
 import ImagePresenter from 'components/ImagePresenter'
 import StepGuide from 'components/StepGuide'
+import EmailForm from 'components/EmailForm'
 
 const globalStyle = css`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
@@ -43,6 +44,10 @@ const PresenterBox = styled.div`
   @media (max-width: 768px) {
     display: block;
   }
+`
+
+const Line = styled.hr`
+  margin: 150px 0;
 `
 
 const App: FunctionComponent = function () {
@@ -92,6 +97,8 @@ const App: FunctionComponent = function () {
           selectBox
         />
       </PresenterBox>
+      <Line />
+      <EmailForm />
     </>
   )
 }
