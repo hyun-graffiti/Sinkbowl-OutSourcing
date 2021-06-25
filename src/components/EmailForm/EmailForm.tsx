@@ -46,6 +46,8 @@ const Button = styled.div`
 `
 
 const EmailForm: FunctionComponent = function () {
+  const smtpjs = window.Email
+
   const [{ name, phone, desc }, setForm] = useState<EmailFormValueType>({
     name: '',
     phone: '',
@@ -64,7 +66,39 @@ const EmailForm: FunctionComponent = function () {
   }
 
   const handleSendEmail = () => {
+    const {
+      REACT_APP_SMTP_HOST,
+      REACT_APP_MAIL_DESTINATION,
+      REACT_APP_MAIL_CLIENT_ID,
+      REACT_APP_MAIL_CLIENT_PW,
+    } = process.env
 
+    if (
+      REACT_APP_SMTP_HOST === undefined ||
+      REACT_APP_MAIL_DESTINATION === undefined ||
+      REACT_APP_MAIL_CLIENT_ID === undefined ||
+      REACT_APP_MAIL_CLIENT_PW === undefined
+    )
+      return
+
+    smtpjs
+      .send({
+        Host: REACT_APP_SMTP_HOST,
+        Username: REACT_APP_MAIL_CLIENT_ID,
+        Password: REACT_APP_MAIL_CLIENT_PW,
+        To: 'ji5485@naver.com',
+        From: REACT_APP_MAIL_CLIENT_ID,
+        Subject: 'This is the subject',
+        Body: 'And this is the body',
+        Attachments: [
+          {
+            name: 'smtpjs.png',
+            path:
+              'https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png',
+          },
+        ],
+      })
+      .then(message => alert(message))
   }
 
   return (
