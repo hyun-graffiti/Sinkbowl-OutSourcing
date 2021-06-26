@@ -22,7 +22,7 @@ const globalStyle = css`
 
   #root {
     max-width: 1250px;
-    margin: 0 auto;
+    margin: 30px auto;
 
     @media (max-width: 991px) {
       width: 100%;
