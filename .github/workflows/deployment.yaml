@@ -14,11 +14,11 @@ jobs:
 
       - name: Generate Environment Variables File
         run: |
-          echo "REACT_APP_MAIL_CLIENT_ID=$MAIL_CLIENT_ID" > .env.production
-          echo "REACT_APP_MAIL_CLIENT_PW=$MAIL_CLIENT_PW" > .env.production
-          echo "REACT_APP_MAIL_DESTINATION=$MAIL_DESTINATION" > .env.production
-          echo "REACT_APP_SMTP_HOST=$SMTP_HOST" > .env.production
-          echo "REACT_APP_SMTP_PORT=$SMTP_PORT" > .env.production
+          echo "REACT_APP_MAIL_CLIENT_ID=$MAIL_CLIENT_ID" >> .env.production
+          echo "REACT_APP_MAIL_CLIENT_PW=$MAIL_CLIENT_PW" >> .env.production
+          echo "REACT_APP_MAIL_DESTINATION=$MAIL_DESTINATION" >> .env.production
+          echo "REACT_APP_SMTP_HOST=$SMTP_HOST" >> .env.production
+          echo "REACT_APP_SMTP_PORT=$SMTP_PORT" >> .env.production
         env:
           MAIL_CLIENT_ID: ${{ secrets.MAIL_CLIENT_ID }}
           MAIL_CLIENT_PW: ${{ secrets.MAIL_CLIENT_PW }}
