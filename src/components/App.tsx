@@ -59,7 +59,13 @@ const App: FunctionComponent = function () {
     isFirst,
   } = useFilterSinkbowl()
 
-  const { afterChange, setDecoratedSelectableItem } = useDecorateResult()
+  const {
+    selectableItem,
+    isNotSelect,
+    afterChange,
+    setDecoratedSelectableItem,
+    setIsNotSelectItem,
+  } = useDecorateResult()
 
   return (
     <>
@@ -87,6 +93,8 @@ const App: FunctionComponent = function () {
           afterChange={afterChange('faucet')}
           setDecoratedSelectableItem={setDecoratedSelectableItem('faucet')}
           selectBox
+          isNotSelect={isNotSelect.faucetIsNotSelect}
+          setIsNotSelect={setIsNotSelectItem('faucet')}
         />
         <ImagePresenter
           name="waterspout"
@@ -95,10 +103,12 @@ const App: FunctionComponent = function () {
           afterChange={afterChange('waterspout')}
           setDecoratedSelectableItem={setDecoratedSelectableItem('waterspout')}
           selectBox
+          isNotSelect={isNotSelect.waterspoutIsNotSelect}
+          setIsNotSelect={setIsNotSelectItem('waterspout')}
         />
       </PresenterBox>
       <Line />
-      <EmailForm />
+      <EmailForm item={selectableItem} isNotSelect={isNotSelect} />
     </>
   )
 }

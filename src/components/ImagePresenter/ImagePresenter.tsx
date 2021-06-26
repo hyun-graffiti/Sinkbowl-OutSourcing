@@ -29,6 +29,8 @@ type ImagePresenterProps = {
   setDecoratedSelectableItem: (id: string) => void
   isFirst?: boolean
   selectBox: boolean
+  isNotSelect?: boolean
+  setIsNotSelect?: (value: boolean) => void
 }
 
 const Wrapper = styled.div`
@@ -128,10 +130,11 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
   setDecoratedSelectableItem,
   isFirst,
   selectBox,
+  isNotSelect,
+  setIsNotSelect,
 }) {
   const slider = useRef<Slider | null>(null)
   const [presentImages, setPresentImages] = useState<ImageType[]>(items)
-  const [isNotSelect, setIsNotSelect] = useState<boolean>(false)
 
   useEffect(() => {
     setPresentImages(items)
@@ -142,7 +145,10 @@ const ImagePresenter: FunctionComponent<ImagePresenterProps> = function ({
 
   const handleChangeCheckbox = ({
     target: { checked },
-  }: ChangeEvent<HTMLInputElement>) => setIsNotSelect(checked)
+  }: ChangeEvent<HTMLInputElement>) => {
+    if (setIsNotSelect === undefined) return
+    setIsNotSelect(checked)
+  }
 
   return (
     <Wrapper>
@@ -176,7 +182,7 @@ type ContentsProps = {
   name: 'sinkbowl' | 'faucet' | 'waterspout'
   presentImages: ImageType[]
   isFirst?: boolean
-  isNotSelect: boolean
+  isNotSelect?: boolean
   slider: MutableRefObject<Slider | null>
   afterChange: (presentImages: ImageType[]) => (current: number) => void
 }

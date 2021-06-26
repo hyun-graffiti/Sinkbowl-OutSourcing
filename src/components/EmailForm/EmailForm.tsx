@@ -1,11 +1,20 @@
 import { ChangeEvent, FunctionComponent, useState } from 'react'
 import styled from '@emotion/styled'
 import InputBox from 'components/InputBox'
+import { SelectableItem, IsNotSelectItem } from 'hooks/useDecorateResult'
+
+type EmailFormProps = {
+  item: SelectableItem
+  isNotSelect: IsNotSelectItem
+}
 
 type EmailFormValueType = {
   name: string
   phone: string
-  file: File | null
+  file: {
+    type: string
+    data: string
+  }
   desc: string
 }
 
@@ -45,24 +54,61 @@ const Button = styled.div`
   }
 `
 
-const EmailForm: FunctionComponent = function () {
+const EmailForm: FunctionComponent<EmailFormProps> = function ({
+  item: { sinkbowl, faucet, waterspout },
+  isNotSelect: { faucetIsNotSelect, waterspoutIsNotSelect },
+}) {
   const smtpjs = window.Email
 
-  const [{ name, phone, desc }, setForm] = useState<EmailFormValueType>({
+  const [
+    {
+      name,
+      phone,
+      file: { type, data },
+      desc,
+    },
+    setForm,
+  ] = useState<EmailFormValueType>({
     name: '',
     phone: '',
-    file: null,
+    file: {
+      type: '',
+      data: '',
+    },
     desc: '',
   })
+  const [isSending, setIsSending] = useState<boolean>(false)
 
-  const handleChange = (
+  const getBase64 = (file: File): Promise<string> => {
+    const reader = new FileReader()
+
+    reader.readAsDataURL(file)
+
+    return new Promise(resolve => {
+      reader.onload = (ev: ProgressEvent<FileReader>) => {
+        const result = ev.target?.result
+        resolve(result as string)
+      }
+    })
+  }
+
+  const handleChange = async (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value, files } = event.target as HTMLInputElement
 
-    if (name === 'file' && files !== null)
-      setForm(prev => ({ ...prev, [name]: files[0] }))
-    else setForm(prev => ({ ...prev, [name]: value }))
+    if (name === 'file' && files !== null) {
+      const base64 = await getBase64(files[0])
+      const type = files[0].name.substring(files[0].name.lastIndexOf('.') + 1)
+
+      setForm(prev => ({
+        ...prev,
+        [name]: {
+          type,
+          data: base64,
+        },
+      }))
+    } else setForm(prev => ({ ...prev, [name]: value }))
   }
 
   const handleSendEmail = () => {
@@ -81,6 +127,27 @@ const EmailForm: FunctionComponent = function () {
     )
       return
 
+    const isNotFaucetSelected = faucetIsNotSelect ? true : faucet === ''
+    const isNotWaterspoutSelected = waterspoutIsNotSelect
+      ? true
+      : waterspout === ''
+
+    if (sinkbowl === '' || isNotFaucetSelected || isNotWaterspoutSelected) {
+      alert(
+        '싱크볼, 수전, 배수구를 선택해주세요.\n만약 수전이나 배수구 구매를 희망하지 않는다면 선택안함을 체크해주세요.',
+      )
+      return
+    }
+
+    if (name === '' || phone === '' || data === '' || desc === '') {
+      alert(
+        '양식에 맞춰 모든 정보를 입력해주세요.\n만약 모든 정보를 입력해도 해당 창이 뜬다면 관리자에게 문의해주세요.',
+      )
+      return
+    }
+
+    setIsSending(true)
+
     smtpjs
       .send({
         Host: REACT_APP_SMTP_HOST,
@@ -88,17 +155,23 @@ const EmailForm: FunctionComponent = function () {
         Password: REACT_APP_MAIL_CLIENT_PW,
         To: 'ji5485@naver.com',
         From: REACT_APP_MAIL_CLIENT_ID,
-        Subject: 'This is the subject',
-        Body: 'And this is the body',
+        Subject: `${name}님의 작업 견적 문의 요청입니다.`,
+        Body: '<h1>And this is the body</h1>',
         Attachments: [
           {
-            name: 'smtpjs.png',
-            path:
-              'https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png',
+            name: `${name}_sinkbowl.${type}`,
+            data,
           },
         ],
       })
-      .then(message => alert(message))
+      .then(status => {
+        if (status !== 'OK')
+          alert(
+            `작업 견적 문의 요청을 보내는데 문제가 발생했습니다.\n쇼핑몰 관리자에게 문의해주세요.\n에러 메세지 : ${status}`,
+          )
+        else alert('작업 견적 문의 요청을 보냈습니다.')
+        setIsSending(false)
+      })
   }
 
   return (
@@ -135,7 +208,9 @@ const EmailForm: FunctionComponent = function () {
           onChange={handleChange}
           placeholder="현재 싱크볼 상태에 대한 설명 및 요청 사항을 입력해주세요."
         />
-        <Button onClick={handleSendEmail}>작업 문의 요청 보내기</Button>
+        <Button onClick={handleSendEmail}>
+          {isSending ? '문의 보내는 중...' : '작업 견적 문의 요청 보내기'}
+        </Button>
       </Partition>
     </Wrapper>
   )

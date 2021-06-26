@@ -76,6 +76,7 @@ const InputBox: FunctionComponent<InputBoxProps> = function ({
           name={name}
           onChange={onChange}
           placeholder={placeholder}
+          accept="image/jpg,image/png,image/jpeg"
         />
       )}
       {type === 'textarea' && (
