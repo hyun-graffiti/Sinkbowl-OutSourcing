@@ -24,6 +24,12 @@ jobs:
           echo "REACT_APP_MAIL_DESTINATION=$(MAIL_DESTINATION)" > .env.production
           echo "REACT_APP_SMTP_HOST=$(SMTP_HOST)" > .env.production
           echo "REACT_APP_SMTP_PORT=$(SMTP_PORT)" > .env.production
+        env:
+          MAIL_CLIENT_ID: ${{ secrets.MAIL_CLIENT_ID }}
+          MAIL_CLIENT_PW: ${{ secrets.MAIL_CLIENT_PW }}
+          MAIL_DESTINATION: ${{ secrets.MAIL_DESTINATION }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
 
       - name: Build React Application
         run: npm run build
