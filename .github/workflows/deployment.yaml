@@ -12,11 +12,6 @@ jobs:
         with:
           node-version: "14"
 
-      - name: Install Dependencies and Surge
-        run: |
-          npm install
-          npm install surge --global
-
       - name: Generate Environment Variables File
         run: |
           echo "REACT_APP_MAIL_CLIENT_ID=$(MAIL_CLIENT_ID)" > .env.production
@@ -30,6 +25,11 @@ jobs:
           MAIL_DESTINATION: ${{ secrets.MAIL_DESTINATION }}
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
+
+      - name: Install Dependencies and Surge
+        run: |
+          npm install
+          npm install surge --global
 
       - name: Build React Application
         run: npm run build
