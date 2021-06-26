@@ -13,6 +13,11 @@ const Wrapper = styled.div`
     width: 80%;
     aspect-ratio: 1;
     object-fit: contain;
+
+    @media (max-width: 768px) {
+      width: 40%;
+      min-width: 200px;
+    }
   }
 `
 

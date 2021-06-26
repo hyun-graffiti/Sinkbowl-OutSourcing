@@ -35,6 +35,10 @@ const Input = styled.input`
   font-weight: 800;
   color: rgba(64, 64, 64, 0.9);
   outline: none;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+  }
 `
 
 const TextArea = styled.textarea`
@@ -48,6 +52,10 @@ const TextArea = styled.textarea`
   color: rgba(64, 64, 64, 0.9);
   outline: none;
   resize: none;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+  }
 `
 
 const InputBox: FunctionComponent<InputBoxProps> = function ({

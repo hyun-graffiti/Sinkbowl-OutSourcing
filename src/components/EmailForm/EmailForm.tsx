@@ -1,6 +1,7 @@
 import { ChangeEvent, FunctionComponent, useState } from 'react'
 import styled from '@emotion/styled'
 import InputBox from 'components/InputBox'
+import EmailFormGuide from 'components/EmailFormGuide'
 import { SelectableItem, IsNotSelectItem } from 'hooks/useDecorateResult'
 
 type EmailFormProps = {
@@ -25,6 +26,12 @@ const Wrapper = styled.div`
   padding: 30px 0;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(64, 64, 64, 0.15);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 30px;
+  }
 `
 
 const Partition = styled.div`
@@ -32,6 +39,16 @@ const Partition = styled.div`
 
   & + & {
     border-left: 0.5px solid rgba(64, 64, 64, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 30px 0;
+
+    & + & {
+      border-left: 0;
+      border-top: 0.5px solid rgba(64, 64, 64, 0.5);
+    }
   }
 `
 
@@ -51,6 +68,10 @@ const Button = styled.div`
 
   &:hover {
     background: rgba(0, 0, 0, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
   }
 `
 
@@ -176,7 +197,9 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
 
   return (
     <Wrapper>
-      <Partition></Partition>
+      <Partition>
+        <EmailFormGuide />
+      </Partition>
       <Partition>
         <InputBox
           type="text"
