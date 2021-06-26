@@ -140,6 +140,8 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
       REACT_APP_MAIL_CLIENT_PW,
     } = process.env
 
+    console.log(REACT_APP_SMTP_HOST, sinkbowl, name)
+
     if (
       REACT_APP_SMTP_HOST === undefined ||
       REACT_APP_MAIL_DESTINATION === undefined ||
