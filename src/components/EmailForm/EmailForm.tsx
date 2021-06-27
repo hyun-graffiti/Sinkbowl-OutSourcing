@@ -30,6 +30,18 @@ const Wrapper = styled.div`
   }
 `
 
+const Title = styled.div`
+  margin-bottom: 50px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: rgb(64, 64, 64);
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+  }
+`
+
 const Button = styled.div`
   width: 100%;
   margin-top: 50px;
@@ -175,6 +187,7 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
 
   return (
     <Wrapper>
+      <Title>교체 의뢰</Title>
       <InputBox
         type="text"
         title="이름"
