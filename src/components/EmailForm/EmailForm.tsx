@@ -1,7 +1,6 @@
 import { ChangeEvent, FunctionComponent, useState } from 'react'
 import styled from '@emotion/styled'
 import InputBox from 'components/InputBox'
-import EmailFormGuide from 'components/EmailFormGuide'
 import { SelectableItem, IsNotSelectItem } from 'hooks/useDecorateResult'
 
 type EmailFormProps = {
@@ -21,34 +20,13 @@ type EmailFormValueType = {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
   width: 100%;
-  padding: 30px 0;
+  padding: 30px 50px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(64, 64, 64, 0.15);
 
   @media (max-width: 768px) {
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-    padding: 0 30px;
-  }
-`
-
-const Partition = styled.div`
-  padding: 0 50px;
-
-  & + & {
-    border-left: 0.5px solid rgba(64, 64, 64, 0.5);
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 30px 0;
-
-    & + & {
-      border-left: 0;
-      border-top: 0.5px solid rgba(64, 64, 64, 0.5);
-    }
+    padding: 30px 30px;
   }
 `
 
@@ -197,44 +175,39 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
 
   return (
     <Wrapper>
-      <Partition>
-        <EmailFormGuide />
-      </Partition>
-      <Partition>
-        <InputBox
-          type="text"
-          title="성함"
-          name="name"
-          value={name}
-          onChange={handleChange}
-          placeholder="성함을 입력해주세요."
-        />
-        <InputBox
-          type="text"
-          title="전화번호"
-          name="phone"
-          value={phone}
-          onChange={handleChange}
-          placeholder="추후 상담 진행을 위해 연락처를 입력해주세요."
-        />
-        <InputBox
-          type="file"
-          title="현재 싱크볼 상태 사진"
-          name="file"
-          onChange={handleChange}
-        />
-        <InputBox
-          type="textarea"
-          title="설명"
-          name="desc"
-          value={desc}
-          onChange={handleChange}
-          placeholder="현재 싱크볼 상태에 대한 설명 및 요청 사항을 입력해주세요."
-        />
-        <Button onClick={handleSendEmail}>
-          {isSending ? '문의 보내는 중...' : '작업 견적 문의 요청 보내기'}
-        </Button>
-      </Partition>
+      <InputBox
+        type="text"
+        title="이름"
+        name="name"
+        value={name}
+        onChange={handleChange}
+        placeholder="이름을 입력해주세요."
+      />
+      <InputBox
+        type="text"
+        title="전화번호"
+        name="phone"
+        value={phone}
+        onChange={handleChange}
+        placeholder="추후 상담 진행을 위해 연락처를 입력해주세요."
+      />
+      <InputBox
+        type="file"
+        title="현재 싱크볼 상태 사진"
+        name="file"
+        onChange={handleChange}
+      />
+      <InputBox
+        type="textarea"
+        title="설명"
+        name="desc"
+        value={desc}
+        onChange={handleChange}
+        placeholder="현재 싱크볼 상태에 대한 설명 및 요청 사항을 입력해주세요."
+      />
+      <Button onClick={handleSendEmail}>
+        {isSending ? '문의 보내는 중...' : '작업 견적 문의 요청 보내기'}
+      </Button>
     </Wrapper>
   )
 }

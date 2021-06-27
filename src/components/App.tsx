@@ -7,7 +7,6 @@ import Faucet from 'constants/faucet'
 import Waterspout from 'constants/waterspout'
 import InputForm from 'components/InputForm'
 import ImagePresenter from 'components/ImagePresenter'
-import StepGuide from 'components/StepGuide'
 import EmailForm from 'components/EmailForm'
 
 const globalStyle = css`
@@ -70,7 +69,6 @@ const App: FunctionComponent = function () {
   return (
     <>
       <Global styles={globalStyle} />
-      <StepGuide />
       <InputForm
         formValue={formValue}
         setFormValue={setFormValue}
