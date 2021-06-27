@@ -75,7 +75,17 @@ const Input = styled.input<ImageComponentProps>`
   }
 
   @media (max-width: 768px) {
-    flex: 1;
+    width: 100px;
+    font-size: 0.75rem;
+
+    ${({ pos, ratio }) =>
+      pos === 'width'
+        ? `
+    top: calc(540px * ${ratio} - (17.5px * (1 - ${ratio})));
+  `
+        : `
+    left: calc(200px * ${ratio} - (50px * (1 - ${ratio})));
+  `}
   }
 `
 
