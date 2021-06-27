@@ -68,6 +68,7 @@ const App: FunctionComponent = function () {
     afterChange,
     setDecoratedSelectableItem,
     setIsNotSelectItem,
+    getItemById,
   } = useDecorateResult()
 
   return (
@@ -110,7 +111,11 @@ const App: FunctionComponent = function () {
         />
       </PresenterBox>
       <Line />
-      <EmailForm item={selectableItem} isNotSelect={isNotSelect} />
+      <EmailForm
+        item={selectableItem}
+        isNotSelect={isNotSelect}
+        getItemById={getItemById}
+      />
     </>
   )
 }

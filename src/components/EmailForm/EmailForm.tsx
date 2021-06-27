@@ -1,11 +1,23 @@
 import { ChangeEvent, FunctionComponent, useState } from 'react'
+import { renderToString } from 'react-dom/server'
 import styled from '@emotion/styled'
 import InputBox from 'components/InputBox'
+import EmailTemplate from 'components/EmailTemplate'
 import { SelectableItem, IsNotSelectItem } from 'hooks/useDecorateResult'
+import { ImageType } from 'components/ImagePresenter/ImagePresenter'
 
 type EmailFormProps = {
   item: SelectableItem
   isNotSelect: IsNotSelectItem
+  getItemById: (
+    sinkbowlId: string,
+    faucetId: string | null,
+    waterspoutId: string | null,
+  ) => {
+    sinkbowl: ImageType | undefined
+    faucet: ImageType | undefined | null
+    waterspout: ImageType | undefined | null
+  }
 }
 
 type EmailFormValueType = {
@@ -68,6 +80,7 @@ const Button = styled.div`
 const EmailForm: FunctionComponent<EmailFormProps> = function ({
   item: { sinkbowl, faucet, waterspout },
   isNotSelect: { faucetIsNotSelect, waterspoutIsNotSelect },
+  getItemById,
 }) {
   const smtpjs = window.Email
 
@@ -138,9 +151,9 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
     )
       return
 
-    const isNotFaucetSelected = faucetIsNotSelect ? true : faucet === ''
+    const isNotFaucetSelected = faucetIsNotSelect ? false : faucet === ''
     const isNotWaterspoutSelected = waterspoutIsNotSelect
-      ? true
+      ? false
       : waterspout === ''
 
     if (sinkbowl === '' || isNotFaucetSelected || isNotWaterspoutSelected) {
@@ -164,10 +177,20 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
         Host: REACT_APP_SMTP_HOST,
         Username: REACT_APP_MAIL_CLIENT_ID,
         Password: REACT_APP_MAIL_CLIENT_PW,
-        To: 'ji5485@naver.com',
+        To: REACT_APP_MAIL_DESTINATION,
         From: REACT_APP_MAIL_CLIENT_ID,
-        Subject: `${name}님의 작업 견적 문의 요청입니다.`,
-        Body: '<h1>And this is the body</h1>',
+        Subject: `[싱크볼 교체 의뢰] ${name}님의 작업 견적 문의 요청입니다.`,
+        Body: renderToString(
+          <EmailTemplate
+            getItemById={getItemById}
+            name={name}
+            phone={phone}
+            desc={desc}
+            sinkbowlId={sinkbowl}
+            faucetId={faucetIsNotSelect ? null : faucet}
+            waterspoutId={waterspoutIsNotSelect ? null : waterspout}
+          />,
+        ),
         Attachments: [
           {
             name: `${name}_sinkbowl.${type}`,

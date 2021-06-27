@@ -1,5 +1,8 @@
 import { ImageType } from 'components/ImagePresenter/ImagePresenter'
 import { useState } from 'react'
+import Sinkbowl from 'constants/sinkbowl'
+import Faucet from 'constants/faucet'
+import Waterspout from 'constants/waterspout'
 
 export type SelectableItem = {
   sinkbowl: string
@@ -24,6 +27,15 @@ type useDecorateResultType = {
     item: AfterChangeParameter,
   ) => (id: string) => void
   setIsNotSelectItem: (item: AfterChangeParameter) => (value: boolean) => void
+  getItemById: (
+    sinkbowlId: string,
+    faucetId: string | null,
+    waterspoutId: string | null,
+  ) => {
+    sinkbowl: ImageType | undefined
+    faucet: ImageType | undefined | null
+    waterspout: ImageType | undefined | null
+  }
 }
 
 export default function useDecorateResult(): useDecorateResultType {
@@ -49,11 +61,28 @@ export default function useDecorateResult(): useDecorateResultType {
   ) => (current: number) =>
     setDecoratedSelectableItem(item)(presentImages[current].id)
 
+  const getItemById = (
+    sinkbowlId: string,
+    faucetId: string | null,
+    waterspoutId: string | null,
+  ) => {
+    const sinkbowl = Sinkbowl.find(item => item.id === sinkbowlId)
+    const faucet =
+      faucetId === null ? null : Faucet.find(item => item.id === faucetId)
+    const waterspout =
+      waterspoutId === null
+        ? null
+        : Waterspout.find(item => item.id === waterspoutId)
+
+    return { sinkbowl, faucet, waterspout }
+  }
+
   return {
     selectableItem,
     isNotSelect,
     afterChange,
     setDecoratedSelectableItem,
     setIsNotSelectItem,
+    getItemById,
   }
 }
