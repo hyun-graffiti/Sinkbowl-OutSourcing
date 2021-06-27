@@ -47,6 +47,10 @@ const PresenterBox = styled.div`
 
 const Line = styled.hr`
   margin: 150px 0;
+
+  @media (max-width: 768px) {
+    margin: 75px 0;
+  }
 `
 
 const App: FunctionComponent = function () {
