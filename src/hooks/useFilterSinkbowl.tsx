@@ -34,11 +34,14 @@ export default function useFilterSinkbowl(): useFilterSinkbowlType {
     const sizeIsValid = (
       name: keyof typeof formValue,
       sinkbowl: SinkbowlType,
-    ): boolean => Math.abs(parseInt(formValue[name]) - sinkbowl[name]) <= 10
+      error = 10,
+    ): boolean => Math.abs(parseInt(formValue[name]) - sinkbowl[name]) <= error
 
-    const filteredSinkbowl = Sinkbowl.filter(
-      (sinkbowl: SinkbowlType) =>
-        sizeIsValid('width', sinkbowl) && sizeIsValid('height', sinkbowl),
+    const filteredSinkbowl = Sinkbowl.filter((sinkbowl: SinkbowlType) =>
+      sinkbowl.widthError === undefined || sinkbowl.heightError === undefined
+        ? sizeIsValid('width', sinkbowl) && sizeIsValid('height', sinkbowl)
+        : sizeIsValid('width', sinkbowl, sinkbowl.widthError) &&
+          sizeIsValid('height', sinkbowl, sinkbowl.heightError),
     )
 
     setSinkbowl(filteredSinkbowl)
