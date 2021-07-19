@@ -41,7 +41,7 @@ export default function useFilterSinkbowl(): useFilterSinkbowlType {
       sinkbowl.widthError === undefined || sinkbowl.heightError === undefined
         ? sizeIsValid('width', sinkbowl) && sizeIsValid('height', sinkbowl)
         : sizeIsValid('width', sinkbowl, sinkbowl.widthError) &&
-        sizeIsValid('height', sinkbowl, sinkbowl.heightError),
+          sizeIsValid('height', sinkbowl, sinkbowl.heightError),
     )
 
     setSinkbowl(filteredSinkbowl)
