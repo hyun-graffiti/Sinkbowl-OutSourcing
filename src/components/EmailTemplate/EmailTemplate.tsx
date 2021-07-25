@@ -13,6 +13,7 @@ type EmailTemplateProps = {
   }
   name: string
   phone: string
+  address: string
   desc: string
   sinkbowlId: string
   faucetId: string | null
@@ -111,6 +112,7 @@ const EmailTemplate: FunctionComponent<EmailTemplateProps> = function ({
   getItemById,
   name,
   phone,
+  address,
   desc,
   sinkbowlId,
   faucetId,
@@ -131,6 +133,8 @@ const EmailTemplate: FunctionComponent<EmailTemplateProps> = function ({
           <div style={InfoStyle.value}>{name}</div>
           <div style={InfoStyle.name}>전화번호</div>
           <div style={InfoStyle.value}>{phone}</div>
+          <div style={InfoStyle.name}>주소</div>
+          <div style={InfoStyle.value}>{address}</div>
           <div style={InfoStyle.name}>설명</div>
           <div style={InfoStyle.value}>{desc}</div>
         </div>

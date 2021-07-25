@@ -84,8 +84,8 @@ const EmailFormGuide: FunctionComponent = function () {
           4. <strong>교체 의뢰 양식</strong>을 작성해주시고, 견적 문의 요청을
           보내주세요.
           <br />
-          현재 설치되어 있는 싱크볼의 가로, 세로 길이와 장폭을 함께
-          작성해주세요.
+          현재 설치되어 있는
+          <strong>싱크볼의 가로, 세로 길이와 장폭을 함께 작성</strong>해주세요.
         </p>
         <br />
         <p>

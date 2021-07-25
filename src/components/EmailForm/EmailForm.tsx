@@ -24,6 +24,7 @@ type EmailFormProps = {
 type EmailFormValueType = {
   name: string
   phone: string
+  address: string
   file: {
     type: string
     data: string
@@ -112,6 +113,7 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
     {
       name,
       phone,
+      address,
       file: { type, data },
       desc,
     },
@@ -119,6 +121,7 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
   ] = useState<EmailFormValueType>({
     name: '',
     phone: '',
+    address: '',
     file: {
       type: '',
       data: '',
@@ -187,7 +190,13 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
       return
     }
 
-    if (name === '' || phone === '' || data === '' || desc === '') {
+    if (
+      name === '' ||
+      phone === '' ||
+      address === '' ||
+      data === '' ||
+      desc === ''
+    ) {
       alert(
         '양식에 맞춰 모든 정보를 입력해주세요.\n만약 모든 정보를 입력해도 해당 창이 뜬다면 관리자에게 문의해주세요.',
       )
@@ -209,6 +218,7 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
             getItemById={getItemById}
             name={name}
             phone={phone}
+            address={address}
             desc={desc}
             sinkbowlId={sinkbowl}
             faucetId={faucetIsNotSelect ? null : faucet}
@@ -254,6 +264,14 @@ const EmailForm: FunctionComponent<EmailFormProps> = function ({
           value={phone}
           onChange={handleChange}
           placeholder="추후 상담 진행을 위해 연락처를 입력해주세요."
+        />
+        <InputBox
+          type="text"
+          title="주소"
+          name="address"
+          value={address}
+          onChange={handleChange}
+          placeholder="자택 주소를 입력해주세요."
         />
         <InputBox
           type="file"
