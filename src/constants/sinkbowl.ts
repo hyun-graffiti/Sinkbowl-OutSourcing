@@ -10,7 +10,7 @@ export type SinkbowlType = {
 const Sinkbowl: SinkbowlType[] = [
   {
     id: '277',
-    name: '한스 CQDJ 850',
+    name: '한스 싱크볼 / CQDJ 850',
     price: '220000',
     src: 'https://cdn.imweb.me/thumbnail/20210627/11f7d22dd4aff.png',
     link: 'https://sinkbowl.co.kr/29/?idx=277',
@@ -19,18 +19,18 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '276',
-    name: '한스 DJ850-Q1',
+    name: '한스 싱크볼 / DJ850-Q1',
     price: '300000',
     src: 'https://cdn.imweb.me/thumbnail/20210627/bbb5ac36ab332.png',
     link: 'https://sinkbowl.co.kr/29/?idx=276',
     width: 820,
-    height: 460,
+    height: 440,
     widthError: 20,
-    heightError: 40,
+    heightError: 20,
   },
   {
     id: '275',
-    name: '한스 DJ850-Q2',
+    name: '한스 싱크볼 / DJ850-Q2',
     price: '340000',
     src: 'https://cdn.imweb.me/thumbnail/20210627/3e6d0e275dd1d.png',
     link: 'https://sinkbowl.co.kr/29/?idx=275',
@@ -39,7 +39,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '274',
-    name: '한스 DJ850-QP',
+    name: '한스 싱크볼 / DJ850-QP',
     price: '340000',
     src: 'https://cdn.imweb.me/thumbnail/20210627/f2829e7201ced.png',
     link: 'https://sinkbowl.co.kr/29/?idx=274',
@@ -48,7 +48,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '273',
-    name: '한스 ESL8745RQ',
+    name: '한스 싱크볼 / ESL8745RQ',
     price: '340000',
     src: 'https://cdn.imweb.me/thumbnail/20210627/abb973fc31435.png',
     link: 'https://sinkbowl.co.kr/29/?idx=273',
@@ -57,7 +57,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '254',
-    name: '도요우라 N 760ZWDL',
+    name: '한스 싱크볼 / 도요우라 N 760ZWDL',
     price: '500000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/98648e3c4eddd.png',
     link: 'https://sinkbowl.co.kr/29/?idx=254',
@@ -66,7 +66,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '253',
-    name: '시게루 JSM-FS',
+    name: '한스 싱크볼 / 시게루 JSM-FS',
     price: '520000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/8027b7f53794f.png',
     link: 'https://sinkbowl.co.kr/29/?idx=253',
@@ -75,7 +75,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '252',
-    name: '시게루 JSN-FS',
+    name: '한스 싱크볼 / 시게루 JSN-FS',
     price: '400000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/69d1cce85e06b.png',
     link: 'https://sinkbowl.co.kr/29/?idx=252',
@@ -84,7 +84,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '251',
-    name: '시게루 JSL-2F FS',
+    name: '한스 싱크볼 / 시게루 JSL-2F FS',
     price: '550000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/e459a8f07610d.png',
     link: 'https://sinkbowl.co.kr/29/?idx=251',
@@ -93,7 +93,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '250',
-    name: '시게루 JSL-3F FS',
+    name: '한스 싱크볼 / 시게루 JSL-3F FS',
     price: '650000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/e861c735e046e.png',
     link: 'https://sinkbowl.co.kr/29/?idx=250',
@@ -102,7 +102,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '249',
-    name: '시게루 JSL-FS',
+    name: '한스 싱크볼 / 시게루 JSL-FS',
     price: '450000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/2dbf16aa7b186.png',
     link: 'https://sinkbowl.co.kr/29/?idx=249',
@@ -111,7 +111,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '248',
-    name: '한스 CS 270',
+    name: '한스 싱크볼 / CS 270',
     price: '30900',
     src: 'https://cdn.imweb.me/thumbnail/20210612/2e1130e8de533.png',
     link: 'https://sinkbowl.co.kr/29/?idx=248',
@@ -120,7 +120,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '247',
-    name: '한스 RB 46',
+    name: '한스 싱크볼 / RB 46',
     price: '47300',
     src: 'https://cdn.imweb.me/thumbnail/20210612/b51d7b773ae18.png',
     link: 'https://sinkbowl.co.kr/29/?idx=247',
@@ -129,7 +129,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '246',
-    name: '한스 ESL 4050RQ',
+    name: '한스 싱크볼 / ESL 4050RQ',
     price: '170000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/4cd4175e6bd08.png',
     link: 'https://sinkbowl.co.kr/29/?idx=246',
@@ -138,7 +138,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '245',
-    name: '한스 ESL 4078RQ',
+    name: '한스 싱크볼 / ESL 4078RQ',
     price: '189000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/8029f7a7ede30.png',
     link: 'https://sinkbowl.co.kr/29/?idx=245',
@@ -147,7 +147,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '244',
-    name: '한스 ESL 3718RQ',
+    name: '한스 싱크볼 / ESL 3718RQ',
     price: '300000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/0ff953cc83b22.png',
     link: 'https://sinkbowl.co.kr/29/?idx=244',
@@ -156,7 +156,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '243',
-    name: '한스 Q 540C',
+    name: '한스 싱크볼 / Q 540C',
     price: '120000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/1fc22c41f66d1.png',
     link: 'https://sinkbowl.co.kr/29/?idx=243',
@@ -165,7 +165,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '242',
-    name: '한스 Q 840C',
+    name: '한스 싱크볼 / Q 840C',
     price: '165000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/7f79ed4ad31a8.png',
     link: 'https://sinkbowl.co.kr/29/?idx=242',
@@ -174,7 +174,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '241',
-    name: '한스 CQ 960C',
+    name: '한스 싱크볼 / CQ 960C',
     price: '210000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/c59a413e48995.png',
     link: 'https://sinkbowl.co.kr/29/?idx=241',
@@ -183,7 +183,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '240',
-    name: '한스 Q 960C',
+    name: '한스 싱크볼 / Q 960C',
     price: '210000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/b2b92ab250727.png',
     link: 'https://sinkbowl.co.kr/29/?idx=240',
@@ -192,7 +192,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '239',
-    name: '한스 HB 46',
+    name: '한스 싱크볼 / HB 46',
     price: '47300',
     src: 'https://cdn.imweb.me/thumbnail/20210612/2c49e71f4ed71.png',
     link: 'https://sinkbowl.co.kr/29/?idx=239',
@@ -201,7 +201,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '237',
-    name: '한스 HB 85',
+    name: '한스 싱크볼 / HB 85',
     price: '107000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/bf95439000f8c.png',
     link: 'https://sinkbowl.co.kr/29/?idx=237',
@@ -210,7 +210,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '235',
-    name: '한스 LJB 960',
+    name: '한스 싱크볼 / LJB 960',
     price: '139000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/e215b3f6541d3.png',
     link: 'https://sinkbowl.co.kr/29/?idx=235',
@@ -219,7 +219,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '234',
-    name: '한스 ES 3219H',
+    name: '한스 싱크볼 / ES 3219H',
     price: '136000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/d33bfd69c7236.png',
     link: 'https://sinkbowl.co.kr/29/?idx=234',
@@ -228,7 +228,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '233',
-    name: '한스 핸드메이드 AVENUE 8884',
+    name: '한스 싱크볼 / 핸드메이드 AVENUE 8884',
     price: '1390000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/b02776740f019.png',
     link: 'https://sinkbowl.co.kr/29/?idx=233',
@@ -239,7 +239,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '232',
-    name: '한스 핸드메이드 AVENUE 8881',
+    name: '한스 싱크볼 / 핸드메이드 AVENUE 8881',
     price: '1090000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/df6ddfff78b7b.png',
     link: 'https://sinkbowl.co.kr/29/?idx=232',
@@ -250,7 +250,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '231',
-    name: '한스 핸드메이드 CITY 6158D',
+    name: '한스 싱크볼 / 핸드메이드 CITY 6158D',
     price: '499000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/1c961e417781e.png',
     link: 'https://sinkbowl.co.kr/29/?idx=231',
@@ -261,7 +261,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '230',
-    name: '한스 핸드메이스 MEGA 8866D',
+    name: '한스 싱크볼 / 핸드메이스 MEGA 8866D',
     price: '990000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/fa2aa68cf63c9.png',
     link: 'https://sinkbowl.co.kr/29/?idx=230',
@@ -270,7 +270,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '229',
-    name: '한스 핸드메이드 GRAND 6301',
+    name: '한스 싱크볼 / 핸드메이드 GRAND 6301',
     price: '459000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/b7954d4224f52.png',
     link: 'https://sinkbowl.co.kr/29/?idx=229',
@@ -279,7 +279,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '228',
-    name: '한스 핸드메이드 GRAND 6302',
+    name: '한스 싱크볼 / 핸드메이드 GRAND 6302',
     price: '549000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/f0a462f61c6ca.png',
     link: 'https://sinkbowl.co.kr/29/?idx=228',
@@ -288,7 +288,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '227',
-    name: '한스 핸드메이드 GRAND 6305J',
+    name: '한스 싱크볼 / 핸드메이드 GRAND 6305J',
     price: '629000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/8f29fde86926b.png',
     link: 'https://sinkbowl.co.kr/29/?idx=227',
@@ -297,7 +297,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '226',
-    name: '한스 핸드메이드 TOWER 5601',
+    name: '한스 싱크볼 / 핸드메이드 TOWER 5601',
     price: '649000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/9b15065982e14.png',
     link: 'https://sinkbowl.co.kr/29/?idx=226',
@@ -306,7 +306,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '225',
-    name: '원앙 CUSS 630',
+    name: '한스 싱크볼 / 원앙 CUSS 630',
     price: '36000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/d4f538f29178f.png',
     link: 'https://sinkbowl.co.kr/29/?idx=225',
@@ -315,7 +315,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '224',
-    name: '원앙 CDUC 750',
+    name: '한스 싱크볼 / 원앙 CDUC 750',
     price: '48000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/41785c6e7cf98.png',
     link: 'https://sinkbowl.co.kr/29/?idx=224',
@@ -324,7 +324,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '223',
-    name: '원앙 DJUS 850 (세라믹 코팅)',
+    name: '한스 싱크볼 / 원앙 DJUS 850 / 세라믹 코팅',
     price: '75000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/01fe7209e2796.png',
     link: 'https://sinkbowl.co.kr/29/?idx=223',
@@ -333,7 +333,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '222',
-    name: '원앙 CDUC 850',
+    name: '한스 싱크볼 / 원앙 CDUC 850',
     price: '64000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/aea0fadddd2a2.png',
     link: 'https://sinkbowl.co.kr/29/?idx=222',
@@ -342,7 +342,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '221',
-    name: '원앙 BSC 3301',
+    name: '한스 싱크볼 / 원앙 BSC 3301',
     price: '28500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/6b81167669d0c.png',
     link: 'https://sinkbowl.co.kr/29/?idx=221',
@@ -351,7 +351,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '220',
-    name: '한스 SG 248',
+    name: '한스 싱크볼 / SG 248',
     price: '137000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/dc0f7a7ceb791.png',
     link: 'https://sinkbowl.co.kr/29/?idx=220',
@@ -360,7 +360,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '219',
-    name: '한스 SP 301',
+    name: '한스 싱크볼 / SP 301',
     price: '149000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/530160e1c836d.png',
     link: 'https://sinkbowl.co.kr/29/?idx=219',
@@ -369,7 +369,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '218',
-    name: '한스 AU-3018 / 휠체어전용 낮은 싱크볼',
+    name: '한스 싱크볼 / AU-3018 / 휠체어 전용 낮은 싱크볼',
     price: '159000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/500531f16aa81.png',
     link: 'https://sinkbowl.co.kr/29/?idx=218',
@@ -378,7 +378,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '217',
-    name: '한스 PSM 239',
+    name: '한스 싱크볼 / PSM 239',
     price: '235000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/730a017c2b254.png',
     link: 'https://sinkbowl.co.kr/29/?idx=217',
@@ -387,7 +387,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '216',
-    name: '한스 PSP 301',
+    name: '한스 싱크볼 / PSP 301',
     price: '250000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/0c045f4d2851b.png',
     link: 'https://sinkbowl.co.kr/29/?idx=216',
@@ -396,7 +396,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '215',
-    name: '원앙 JUS 850',
+    name: '한스 싱크볼 / 원앙 JUS 850',
     price: '47000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/cce4675467913.png',
     link: 'https://sinkbowl.co.kr/29/?idx=215',
@@ -405,7 +405,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '214',
-    name: '점보 싱크볼 DSC 850',
+    name: '리젠스 싱크볼 / DSC 850',
     price: '60500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/3e31fd89cb3a3.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=214',
@@ -414,7 +414,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '213',
-    name: '점보 싱크볼 DS 740',
+    name: '리젠스 싱크볼 / DS 740',
     price: '60500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/95c723703b4ec.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=213',
@@ -423,7 +423,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '212',
-    name: '싱글 싱크볼 SC 360',
+    name: '리젠스 싱크볼 / SC 360',
     price: '60500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/d2193d7417132.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=212',
@@ -432,7 +432,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '211',
-    name: '싱글 싱크볼 LIS 630 (S)',
+    name: '리젠스 싱크볼 / LIS 630 (S)',
     price: '55000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/30b9dfb2dd8e1.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=211',
@@ -441,7 +441,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '210',
-    name: '싱글 싱크볼 LIS 630 (L)',
+    name: '리젠스 싱크볼 / LIS 630 (L)',
     price: '55000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/78f482afabae3.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=210',
@@ -450,7 +450,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '209',
-    name: '싱글 싱크볼 ISS 6348 (L)',
+    name: '리젠스 싱크볼 / ISS 6348 (L)',
     price: '55000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/dddde749bf968.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=209',
@@ -459,7 +459,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '208',
-    name: '싱글 싱크볼 ISS 640 (L)',
+    name: '리젠스 싱크볼 / ISS 640 (L)',
     price: '55000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/aee65b7cd166e.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=208',
@@ -468,7 +468,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '207',
-    name: '싱글 싱크볼 ISS 480 (L)',
+    name: '리젠스 싱크볼 / ISS 480 (L)',
     price: '44000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/741d6dcadfa56.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=207',
@@ -477,7 +477,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '206',
-    name: '싱글 싱크볼 ISS 480 (C)',
+    name: '리젠스 싱크볼 / ISS 480 (C)',
     price: '33000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/2be4542cbb2a7.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=206',
@@ -486,7 +486,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '205',
-    name: '더블 싱크볼 LISDP 870',
+    name: '리젠스 싱크볼 / LISDP 870',
     price: '83500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/13fd23e18397b.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=205',
@@ -495,7 +495,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '204',
-    name: '더블 싱크볼 ISD 870',
+    name: '리젠스 싱크볼 / ISD 870',
     price: '66000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/05699ae55d01c.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=204',
@@ -504,7 +504,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '203',
-    name: '사각싱크볼 LQ270 + 소배수구 SET',
+    name: '리젠스 싱크볼 / LQ270 / 소배수구 포함 세트',
     price: '95000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/064b820eef536.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=203',
@@ -513,7 +513,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '202',
-    name: '점보 싱크볼 ESCP 840 (L/R) 무오버',
+    name: '리젠스 싱크볼 / ESCP 840 (L/R) / 무오버',
     price: '115500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/7b173eabfe01a.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=202',
@@ -522,18 +522,16 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '201',
-    name: '사각싱크볼 GQ900 + 대망(WBL4724) + 배수구 + 도마(CB4725) SET',
+    name: '리젠스 싱크볼 / GQ900 / 대망 + 배수구 + 도마 포함 세트',
     price: '410000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/d073fb5eece6a.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=201',
     width: 870,
     height: 480,
-    widthError: 10,
-    heightError: 10,
   },
   {
     id: '200',
-    name: '점보 싱크볼 VS 870',
+    name: '리젠스 싱크볼 / VS 870',
     price: '93500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/ba5f833c03b0d.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=200',
@@ -542,7 +540,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '199',
-    name: '점보 싱크볼 LS 940',
+    name: '리젠스 싱크볼 / LS 940',
     price: '146000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/a02de4c665fd3.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=199',
@@ -551,7 +549,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '198',
-    name: '점보 싱크볼 LS 900',
+    name: '리젠스 싱크볼 / LS 900',
     price: '143000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/ecb51393aa89e.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=198',
@@ -560,7 +558,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '197',
-    name: '점보 싱크볼 LS 850',
+    name: '리젠스 싱크볼 / LS 850',
     price: '105000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/fa4ad682f915c.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=197',
@@ -569,7 +567,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '196',
-    name: '점보 싱크볼 LS 540',
+    name: '리젠스 싱크볼 / LS 540',
     price: '66000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/10f341e38b93e.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=196',
@@ -578,7 +576,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '195',
-    name: '점보 싱크볼 LJS 850',
+    name: '리젠스 싱크볼 / LJS 850',
     price: '49500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/89c637da53bed.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=195',
@@ -587,7 +585,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '194',
-    name: '점보 싱크볼 LDSC 850',
+    name: '리젠스 싱크볼 / LDSC 850',
     price: '82500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/495c076e32912.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=194',
@@ -596,7 +594,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '193',
-    name: '점보 싱크볼 LDS 740',
+    name: '리젠스 싱크볼 / LDS 740',
     price: '60500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/691df428e7df6.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=193',
@@ -605,7 +603,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '192',
-    name: '점보 싱크볼 JSC 870',
+    name: '리젠스 싱크볼 / JSC 870',
     price: '49500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/514007d62818b.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=192',
@@ -614,7 +612,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '191',
-    name: '점보 싱크볼 JS 870',
+    name: '리젠스 싱크볼 / JS 870',
     price: '49500',
     src: 'https://cdn.imweb.me/thumbnail/20210608/f47ea9865b26d.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=191',
@@ -623,7 +621,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '190',
-    name: '점보 싱크볼 ISS 630(S)',
+    name: '리젠스 싱크볼 / ISS 630 (S)',
     price: '55000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/abe6c3127fb47.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=190',
@@ -632,7 +630,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '189',
-    name: '점보 싱크볼 HS 870',
+    name: '리젠스 싱크볼 / HS 870',
     price: '82500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/4d666a3fe01b0.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=189',
@@ -641,7 +639,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '188',
-    name: '점보 싱크볼 HS 850',
+    name: '리젠스 싱크볼 / HS 850',
     price: '82500',
     src: 'https://cdn.imweb.me/thumbnail/20210612/150ac6731048b.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=188',
@@ -650,7 +648,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '187',
-    name: '점보 싱크볼 DSCP 850 무오버',
+    name: '리젠스 싱크볼 / DSCP 850 / 무오버',
     price: '66000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/01c975268d875.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=187',
@@ -659,7 +657,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '186',
-    name: '사각싱크볼 LQ490 + 소배수구 SET',
+    name: '리젠스 싱크볼 / LQ490 / 소배수구 포함 세트',
     price: '110000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/dd38bc9bed2cb.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=186',
@@ -668,7 +666,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '185',
-    name: '사각싱크볼 LQ540 + 대망 + 소망 + 배수구 SET',
+    name: '리젠스 싱크볼 / LQ540 / 대망 + 소망 + 배수구 포함 세트',
     price: '130000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/d9a77b1f16f98.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=185',
@@ -677,7 +675,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '184',
-    name: '사각싱크볼 LQ660 + 배수구 SET',
+    name: '리젠스 싱크볼 / LQ660 / 배수구 포함 세트',
     price: '154000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/883d7982fd865.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=184',
@@ -686,7 +684,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '183',
-    name: '사각싱크볼 LQ840 + 대망(WBL4725) + 소망(WBS120) + 대배수구 SET',
+    name: '리젠스 싱크볼 / LQ840 / 대망 + 소망 + 대배수구 포함 세트',
     price: '200000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/c869da59ce496.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=183',
@@ -695,7 +693,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '182',
-    name: '사각싱크볼 LQ860 + 대망(WBL4725) + 소망(WBS120)',
+    name: '리젠스 싱크볼 / LQ860 / 대망 + 소망 포함 세트',
     price: '200000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/7b0a647344076.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=182',
@@ -704,7 +702,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '181',
-    name: '사각싱크볼 LQ950 + 대망(WBL4725) + 소망(WBS120)',
+    name: '리젠스 싱크볼 / LQ950 / 대망 + 소망 포함 세트',
     price: '280000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/45c08278ac7d5.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=181',
@@ -713,7 +711,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '180',
-    name: '사각싱크볼 LQCR8345',
+    name: '리젠스 싱크볼 / LQCR8345',
     price: '410000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/292b442455576.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=180',
@@ -722,7 +720,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '179',
-    name: '사각싱크볼 LQCR3045',
+    name: '리젠스 싱크볼 / LQCR3045',
     price: '202000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/1ac92bbd01d3b.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=179',
@@ -731,7 +729,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '178',
-    name: '사각싱크볼 LQCR4045',
+    name: '리젠스 싱크볼 / LQCR4045',
     price: '232000',
     src: 'https://cdn.imweb.me/thumbnail/20210607/e6fb3cda0e915.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=178',
@@ -740,7 +738,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '177',
-    name: '사각싱크볼 LQCR5545',
+    name: '리젠스 싱크볼 / LQCR5545',
     price: '265000',
     src: 'https://cdn.imweb.me/thumbnail/20210607/a9dddf8808cd4.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=177',
@@ -749,7 +747,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '176',
-    name: '사각싱크볼 LQCR8345',
+    name: '리젠스 싱크볼 / LQCR8345',
     price: '240000',
     src: 'https://cdn.imweb.me/thumbnail/20210607/a55ec60a29e71.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=176',
@@ -758,7 +756,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '175',
-    name: '사각싱크볼 LQCR9545',
+    name: '리젠스 싱크볼 / LQCR9545',
     price: '320000',
     src: 'https://cdn.imweb.me/thumbnail/20210607/d720cf86628f3.jpg',
     link: 'https://sinkbowl.co.kr/28/?idx=175',
@@ -767,7 +765,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '174',
-    name: '싱크볼 Apell 스페라',
+    name: '백조 싱크볼 / Apell 스페라',
     price: '1150000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/0c95ab52638cb.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=174',
@@ -776,7 +774,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '173',
-    name: '싱크볼 Apell 리니어 시리즈',
+    name: '백조 싱크볼 / Apell 리니어 시리즈',
     price: '680000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/8dfd4b5baabdf.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=173',
@@ -785,7 +783,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '172',
-    name: '싱크볼 Apell 페레라 제로',
+    name: '백조 싱크볼 / Apell 페레라 제로',
     price: '600000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/3025115719772.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=172',
@@ -794,7 +792,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '171',
-    name: '싱크볼 Apell 페레라 플러스',
+    name: '백조 싱크볼 / Apell 페레라 플러스',
     price: '580000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/ceaf754f7c48e.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=171',
@@ -803,7 +801,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '170',
-    name: '싱크볼 DL980 SET',
+    name: '백조 싱크볼 / DL980 / 배수구 포함 세트',
     price: '250000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/7dc03287f8663.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=170',
@@ -812,7 +810,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '169',
-    name: '싱크볼 Age-Friendly 835',
+    name: '백조 싱크볼 / Age-Friendly 835',
     price: '280000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/9f08b978bc6fa.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=169',
@@ -821,7 +819,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '168',
-    name: '싱크볼 Age-Friendly 430',
+    name: '백조 싱크볼 / Age-Friendly 430',
     price: '137000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/e1767335c27c6.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=168',
@@ -830,7 +828,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '167',
-    name: '싱크볼 IS-900',
+    name: '백조 싱크볼 / IS-900',
     price: '95000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/e200c5c3f1474.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=167',
@@ -839,7 +837,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '166',
-    name: '싱크볼 WDS500 (배수구 포함)',
+    name: '백조 싱크볼 / WDS500 / 배수구 포함 세트',
     price: '70000',
     src: 'https://cdn.imweb.me/thumbnail/20210518/c1b706f9da7bb.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=166',
@@ -848,7 +846,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '165',
-    name: '싱크볼 DS980 SET',
+    name: '백조 싱크볼 / DS980 / 배수구 포함 세트',
     price: '250000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/ba8833a985c9a.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=165',
@@ -857,7 +855,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '164',
-    name: '싱크볼 DS850 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 수세미망)',
+    name: '백조 싱크볼 / DS850 / 배수구 + 와이어바스켓 + 수세미망 포함 세트',
     price: '99000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/ba22871ebc296.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=164',
@@ -867,7 +865,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '163',
     name:
-      '싱크볼 HD950 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 +수세미망 + 바스켓 받침대)',
+      '백조 싱크볼 / HD950 / 배수구 + 와이어바스켓 +수세미망 + 바스켓 받침대 포함 세트',
     price: '290000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/600362f697ffd.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=163',
@@ -877,7 +875,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '162',
     name:
-      '싱크볼 WSDS850 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 수세미망 + 반달배수구커버)',
+      '백조 싱크볼 / WSDS850 / 배수구 + 와이어바스켓 + 수세미망 + 반달배수구커버 포함 세트',
     price: '130000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/3534bf3258605.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=162',
@@ -886,8 +884,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '161',
-    name:
-      '싱크볼 WAVE860 (SET 판매 - 싱크볼 + 배수구 + 수세미망 + 와이어바스켓)',
+    name: '백조 싱크볼 / WAVE860 / 배수구 + 수세미망 + 와이어바스켓 포함 세트',
     price: '125000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/740694266527c.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=161',
@@ -896,8 +893,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '160',
-    name:
-      '싱크볼 ULTRA900 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 수세미망)',
+    name: '백조 싱크볼 / ULTRA900 / 배수구 + 와이어바스켓 + 수세미망 포함 세트',
     price: '220000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/d2786009ba148.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=160',
@@ -906,7 +902,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '159',
-    name: '싱크볼 SJS850 (배수구 포함)',
+    name: '백조 싱크볼 / SJS850 / 배수구 포함 세트',
     price: '56000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/de6ec6a4add1d.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=159',
@@ -915,7 +911,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '158',
-    name: '싱크볼 SC550 (배수구 포함)',
+    name: '백조 싱크볼 / SC550 / 배수구 포함 세트',
     price: '68000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/dd4f664948b50.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=158',
@@ -924,7 +920,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '157',
-    name: '싱크볼 RS890 (배수구 포함)',
+    name: '백조 싱크볼 / RS890 / 배수구 포함 세트',
     price: '95000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/f58c249e7fe98.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=157',
@@ -933,7 +929,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '156',
-    name: '싱크볼 RS840 (배수구 포함)',
+    name: '백조 싱크볼 / RS840 / 배수구 포함 세트',
     price: '85000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/dea4e8173d48b.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=156',
@@ -942,7 +938,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '155',
-    name: '싱크볼 RS490 (배수구 포함)',
+    name: '백조 싱크볼 / RS490 / 배수구 포함 세트',
     price: '75000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/f8271b72e09d2.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=155',
@@ -951,7 +947,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '154',
-    name: '싱크볼 RD890 (배수구 포함)',
+    name: '백조 싱크볼 / RD890 / 배수구 포함 세트',
     price: '145000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/9cdaae0c2b23d.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=154',
@@ -960,7 +956,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '153',
-    name: '싱크볼 PRS840 (배수구 포함)',
+    name: '백조 싱크볼 / PRS840 / 배수구 포함 세트',
     price: '95000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/4c400eb38c3c0.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=153',
@@ -969,7 +965,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '152',
-    name: '싱크볼 OS800 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓)',
+    name: '백조 싱크볼 / OS800 / 배수구 + 와이어바스켓 포함 세트',
     price: '98000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/55a4f229df104.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=152',
@@ -978,7 +974,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '151',
-    name: '싱크볼 OS630 (배수구 포함)',
+    name: '백조 싱크볼 / OS630 / 배수구 포함 세트',
     price: '67000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/dfd9cb6fbcc2f.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=151',
@@ -987,7 +983,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '150',
-    name: '싱크볼 NS850 (배수구 포함)',
+    name: '백조 싱크볼 / NS850 / 배수구 포함 세트',
     price: '92000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/9a8085d2ce00f.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=150',
@@ -996,7 +992,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '149',
-    name: '싱크볼 LS700 (SET 판매 - 싱크볼 + 배수구 + 스텐망)',
+    name: '백조 싱크볼 / LS700 / 배수구 + 스텐망 포함 세트',
     price: '95000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/0290054b0c4b2.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=149',
@@ -1005,7 +1001,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '148',
-    name: '싱크볼 JS870 (배수구 포함)',
+    name: '백조 싱크볼 / JS870 / 배수구 포함 세트',
     price: '81000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/0f526feaab310.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=148',
@@ -1014,7 +1010,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '147',
-    name: '싱크볼 JS1020 (배수구 포함)',
+    name: '백조 싱크볼 / JS1020 / 배수구 포함 세트',
     price: '145000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/e00905ee80efd.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=147',
@@ -1023,7 +1019,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '146',
-    name: '싱크볼 IS530 (배수구 포함)',
+    name: '백조 싱크볼 / IS530 / 배수구 포함 세트',
     price: '60000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/2ac80abed6bf3.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=146',
@@ -1032,7 +1028,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '145',
-    name: '싱크볼 IS480 (배수구 포함)',
+    name: '백조 싱크볼 / IS480 / 배수구 포함 세트',
     price: '44000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/2453662da0ab1.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=145',
@@ -1041,7 +1037,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '144',
-    name: '싱크볼 IS430 (배수구 포함)',
+    name: '백조 싱크볼 / IS430 / 배수구 포함 세트',
     price: '49000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/6e9e5160f0dc2.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=144',
@@ -1050,7 +1046,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '143',
-    name: '싱크볼 ID900 (배수구 포함)',
+    name: '백조 싱크볼 / ID900 / 배수구 포함 세트',
     price: '110000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/89532edf34f45.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=143',
@@ -1059,7 +1055,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '142',
-    name: '싱크볼 ID1100 (배수구 포함)',
+    name: '백조 싱크볼 / ID1100 / 배수구 포함 세트',
     price: '120000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/c9c5994c86150.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=142',
@@ -1068,8 +1064,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '141',
-    name:
-      '싱크볼 EDGE870 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 수세미망)',
+    name: '백조 싱크볼 / EDGE870 / 배수구 + 와이어바스켓 + 수세미망 포함 세트',
     price: '130000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/5faa62cf73ad3.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=141',
@@ -1078,7 +1073,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '140',
-    name: '싱크볼 DS880 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 수세미망)',
+    name: '백조 싱크볼 / DS880 / 배수구 + 와이어바스켓 + 수세미망 포함 세트',
     price: '110000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/f47e68995a099.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=140',
@@ -1087,7 +1082,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '139',
-    name: '싱크볼 DS840 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 수세미망)',
+    name: '백조 싱크볼 / DS840 / 배수구 + 와이어바스켓 + 수세미망 포함 세트',
     price: '140000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/95cc7b17eb41c.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=139',
@@ -1096,7 +1091,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '138',
-    name: '싱크볼 DS740 (SET 판매 - 싱크볼 + 배수구 + 수세미망)',
+    name: '백조 싱크볼 / DS740 / 배수구 + 수세미망 포함 세트',
     price: '70000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/a5635b46c67f3.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=138',
@@ -1105,8 +1100,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '136',
-    name:
-      '싱크볼 DSC840 (SET 판매 – 싱크볼 + 배수구 + 와이어바스켓 + 수세미망)',
+    name: '백조 싱크볼 / DSC840 / 배수구 + 와이어바스켓 + 수세미망 포함 세트',
     price: '140000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/b9e3ab9a66d3e.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=136',
@@ -1115,7 +1109,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '135',
-    name: '싱크볼 BD1100 (배수구 포함)',
+    name: '백조 싱크볼 / BD1100 / 배수구 포함 세트',
     price: '120000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/fb577a7455cca.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=135',
@@ -1125,7 +1119,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '134',
     name:
-      '싱크볼 3D900 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 수세미망 + 도마걸이 )',
+      '백조 싱크볼 / 3D900 / 배수구 + 와이어바스켓 + 수세미망 + 도마걸이 포함 세트',
     price: '230000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/8b4d388142c29.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=134',
@@ -1134,7 +1128,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '133',
-    name: '싱크볼 VS950 (SET 판매 – 씽크볼 + 배수구 + 와이어바스켓 + 수세미망)',
+    name: '백조 싱크볼 / VS950 / 배수구 + 와이어바스켓 + 수세미망 포함 세트',
     price: '250000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/5998030349b41.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=133',
@@ -1143,7 +1137,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '132',
-    name: 'QUIET 960',
+    name: '백조 싱크볼 / QUIET 960',
     price: '290000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/692e63d6828ea.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=132',
@@ -1152,7 +1146,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '131',
-    name: 'QUITE 860',
+    name: '백조 싱크볼 / QUITE 860',
     price: '265000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/ea718b6b240d5.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=131',
@@ -1161,7 +1155,8 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '130',
-    name: 'QUIET 800 SET (배수구 + 와이어바스켓 + 수세미망)',
+    name:
+      '백조 싱크볼 / QUIET 800 / 배수구 + 와이어바스켓 + 수세미망 포함 세트',
     price: '255000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/f4a456d14f556.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=130',
@@ -1170,7 +1165,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '129',
-    name: 'QUIET 540 (배수구 포함)',
+    name: '백조 싱크볼 / QUIET 540 / 배수구 포함 세트',
     price: '200000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/2f5eb43c86272.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=129',
@@ -1179,7 +1174,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '128',
-    name: 'CalmForte730 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte730 / 스테인리스 사각 싱크볼 세트',
     price: '610000',
     src: 'https://cdn.imweb.me/thumbnail/20210518/4f3054e23faf4.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=128',
@@ -1188,7 +1183,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '127',
-    name: 'CalmForte960 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte960 / 스테인리스 사각 싱크볼 세트',
     price: '490000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/6ac27cb68242b.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=127',
@@ -1197,7 +1192,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '126',
-    name: 'CalmForte950L 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte950L / 스테인리스 사각 싱크볼 세트',
     price: '1000000',
     src: 'https://cdn.imweb.me/thumbnail/20210518/dfccb2b009330.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=126',
@@ -1206,7 +1201,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '125',
-    name: 'CalmForte900 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte900 / 스테인리스 사각 싱크볼 세트',
     price: '750000',
     src: 'https://cdn.imweb.me/thumbnail/20210523/fc9bf14a23152.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=125',
@@ -1215,7 +1210,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '124',
-    name: 'CalmForte860 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte860 / 스테인리스 사각 싱크볼 세트',
     price: '430000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/15cddc5ca10a8.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=124',
@@ -1224,7 +1219,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '123',
-    name: 'CalmForte830 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte830 / 스테인리스 사각 싱크볼 세트',
     price: '650000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/8fd7c66f281d7.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=123',
@@ -1233,7 +1228,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '122',
-    name: 'CalmForte800 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte800 / 스테인리스 사각 싱크볼 세트',
     price: '410000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/399fa8ef4c8c4.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=122',
@@ -1242,7 +1237,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '121',
-    name: 'CalmForte630 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte630 / 스테인리스 사각 싱크볼 세트',
     price: '550000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/c15e5f77d0f78.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=121',
@@ -1251,7 +1246,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '120',
-    name: 'CalmForte550 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte550 / 스테인리스 사각 싱크볼 세트',
     price: '490000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/3ba52ca95fea0.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=120',
@@ -1260,7 +1255,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '119',
-    name: 'CalmForte540 스텐 사각 씽크볼 세트',
+    name: '백조 싱크볼 / CalmForte540 / 스테인리스 사각 싱크볼 세트',
     price: '350000',
     src: 'https://cdn.imweb.me/thumbnail/20210612/031549df832bd.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=119',
@@ -1269,7 +1264,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '117',
-    name: '엠보 DS740 SET (악세사리 + 배수구)',
+    name: '백조 싱크볼 / 엠보 DS740 / 악세사리 + 배수구 포함 세트',
     price: '105000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/7abdccc05409a.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=117',
@@ -1278,7 +1273,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '116',
-    name: '엠보 EDGE870 SET (악세사리 + 배수구)',
+    name: '백조 싱크볼 / 엠보 EDGE870 / 악세사리 + 배수구 포함 세트',
     price: '165000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/3fdecbd62669a.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=116',
@@ -1287,7 +1282,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '115',
-    name: '엠보 OS630 (배수구 포함)',
+    name: '백조 싱크볼 / 엠보 OS630 / 배수구 포함 세트',
     price: '105000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/bc7f29863a62e.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=115',
@@ -1296,7 +1291,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '114',
-    name: '엠보 RS840 (배수구 포함)',
+    name: '백조 싱크볼 / 엠보 RS840 / 배수구 포함 세트',
     price: '128000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/1a21210ae65d7.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=114',
@@ -1305,7 +1300,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '113',
-    name: '엠보 SC550 (배수구 포함)',
+    name: '백조 싱크볼 / 엠보 SC550 / 배수구 포함 세트',
     price: '105000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/5a7168715ab2f.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=113',
@@ -1314,7 +1309,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '112',
-    name: '엠보 NS850 (배수구 포함)',
+    name: '백조 싱크볼 / 엠보 NS850 / 배수구 포함 세트',
     price: '130000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/9025fe7e919b7.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=112',
@@ -1323,7 +1318,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '111',
-    name: '엠보 JS870 (배수구 포함)',
+    name: '백조 싱크볼 / 엠보 JS870 / 배수구 포함 세트',
     price: '115000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/8e81ec2e2f5e7.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=111',
@@ -1332,7 +1327,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '110',
-    name: '엠보 WAVE860 SET (악세사리 + 배수구)',
+    name: '백조 싱크볼 / 엠보 WAVE860 / 악세사리 + 배수구 포함 세트',
     price: '160000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/2d007800cc711.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=110',
@@ -1341,7 +1336,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '109',
-    name: '엠보 SJS850 (배수구 포함)',
+    name: '백조 싱크볼 / 엠보 SJS850 / 배수구 포함 세트',
     price: '95000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/de28797a81aad.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=109',
@@ -1350,7 +1345,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '108',
-    name: '엠보 3D900 SET (악세사리 + 배수구)',
+    name: '백조 싱크볼 / 엠보 3D900 / 악세사리 + 배수구 포함 세트',
     price: '265000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/ddd59be83469c.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=108',
@@ -1359,7 +1354,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '107',
-    name: '엠보 FDS850 SET (악세사리 + 배수구)',
+    name: '백조 싱크볼 / 엠보 FDS850 / 악세사리 + 배수구 포함 세트',
     price: '134000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/57d3f7b50c1bb.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=107',
@@ -1368,7 +1363,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '106',
-    name: '엠보 WDS500 (배수구 포함)',
+    name: '백조 싱크볼 / 엠보 WDS500 / 배수구 포함 세트',
     price: '115000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/5a273c9016c1d.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=106',
@@ -1378,7 +1373,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '105',
     name:
-      '프리미엄 사각볼 SQS500 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 나무도마)',
+      '백조 싱크볼 / 프리미엄 사각볼 SQS500 / 배수구 + 와이어바스켓 + 나무도마 포함 세트',
     price: '260000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/d851462369ffc.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=105',
@@ -1388,7 +1383,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '104',
     name:
-      '프리미엄 사각볼 SQS900 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 나무도마)',
+      '백조 싱크볼 / 프리미엄 사각볼 SQS900 / 배수구 + 와이어바스켓 + 나무도마 포함 세트',
     price: '370000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/0dcaf7723cbd8.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=104',
@@ -1397,7 +1392,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '103',
-    name: '프리미엄 사각볼 FamSink (ST)',
+    name: '백조 싱크볼 / 프리미엄 스테인리스 사각볼 FamSink',
     price: '350000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/962593142b2fa.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=103',
@@ -1406,7 +1401,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '102',
-    name: '프리미엄 사각볼 SQSR500 (배수구 포함)',
+    name: '백조 싱크볼 / 프리미엄 사각볼 SQSR500 / 배수구 포함 세트',
     price: '220000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/307fdae4519a8.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=102',
@@ -1415,7 +1410,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '101',
-    name: '프리미엄 사각볼 SQS2311 (배수구 포함)',
+    name: '백조 싱크볼 / 프리미엄 사각볼 SQS2311 / 배수구 포함 세트',
     price: '550000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/8279454c81c5c.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=101',
@@ -1425,7 +1420,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '100',
     name:
-      '프리미엄 사각볼 SWSR780 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 나무도마)',
+      '백조 싱크볼 / 프리미엄 사각볼 SWSR780 / 배수구 + 와이어바스켓 + 나무도마 포함 세트',
     price: '400000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/b00e571647f51.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=100',
@@ -1434,7 +1429,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '99',
-    name: '프리미엄 사각볼 SQSR380 (배수구 포함)',
+    name: '백조 싱크볼 / 프리미엄 사각볼 SQSR380 / 배수구 포함 세트',
     price: '280000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/b6334e4f60ede.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=99',
@@ -1443,7 +1438,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '97',
-    name: '엠보 프리미엄 사각볼 ZR008 (배수구 포함)',
+    name: '백조 싱크볼 / 엠보 프리미엄 사각볼 ZR008 / 배수구 포함 세트',
     price: '385000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/3676e67ac49c2.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=97',
@@ -1452,7 +1447,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '96',
-    name: 'GRAND860 (SET 판매 – 싱크볼 + 배수구 + 와이어바스켓 + 수세미망)',
+    name: '백조 싱크볼 / GRAND860 / 배수구 + 와이어바스켓 + 수세미망 포함 세트',
     price: '205000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/2648d7ce3a6b4.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=96',
@@ -1462,7 +1457,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '95',
     name:
-      '프리미엄 사각볼 SQSR900 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 나무도마)',
+      '백조 싱크볼 / 프리미엄 사각볼 SQSR900 / 배수구 + 와이어바스켓 + 나무도마 포함 세트',
     price: '400000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/af0fe1989bf79.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=95',
@@ -1472,7 +1467,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '94',
     name:
-      '프리미엄 사각볼 SWSR900 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 나무도마)',
+      '백조 싱크볼 / 프리미엄 사각볼 SWSR900 / 배수구 + 와이어바스켓 + 나무도마 포함 세트',
     price: '420000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/113f7dd6f0bfd.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=94',
@@ -1481,7 +1476,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '93',
-    name: '소형 싱크대 GRAND540 (배수구 포함)',
+    name: '백조 싱크볼 / 소형 싱크대 GRAND540 / 배수구 포함 세트',
     price: '145000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/d6470cef0fca6.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=93',
@@ -1491,7 +1486,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '92',
     name:
-      '프리미엄 사각볼 SQSR780 (SET 판매 - 싱크볼 + 배수구 + 와이어바스켓 + 나무도마)',
+      '백조 싱크볼 / 프리미엄 사각볼 SQSR780 / 배수구 + 와이어바스켓 + 나무도마 포함 세트',
     price: '260000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/f9c0e86cbd97e.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=92',
@@ -1500,7 +1495,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '91',
-    name: '프리미엄 사각볼 LD9511 (배수구 포함)',
+    name: '백조 싱크볼 / 프리미엄 사각볼 LD9511 / 배수구 포함 세트',
     price: '580000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/c5f529b37f8ef.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=91',
@@ -1509,7 +1504,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '90',
-    name: '프리미엄 사각볼 SQS1717 (배수구 포함)',
+    name: '백조 싱크볼 / 프리미엄 사각볼 SQS1717 / 배수구 포함 세트',
     price: '550000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/69ea34ce453b1.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=90',
@@ -1518,7 +1513,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '89',
-    name: '프리미엄 사각볼 SQSR230 (배수구 포함)',
+    name: '백조 싱크볼 / 프리미엄 사각볼 SQSR230 / 배수구 포함 세트',
     price: '255000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/a9fc318be68c9.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=89',
@@ -1527,7 +1522,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '88',
-    name: '프리미엄 사각볼 FamSink Black',
+    name: '백조 싱크볼 / 프리미엄 사각볼 FamSink Black',
     price: '490000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/71332b26c3886.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=88',
@@ -1536,7 +1531,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '85',
-    name: '아메리칸 싱크볼 BS584 (배수구 포함)',
+    name: '백조 싱크볼 / 아메리칸 싱크볼 BS584 / 배수구 포함 세트',
     price: '170000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/f1aab5f2f4c94.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=85',
@@ -1545,7 +1540,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '84',
-    name: '엠보 프리미엄 사각볼 ZR009 (배수구 포함)',
+    name: '백조 싱크볼 / 엠보 프리미엄 사각볼 ZR009 / 배수구 포함 세트',
     price: '363000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/7374ffab0374b.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=84',
@@ -1554,7 +1549,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '83',
-    name: '아메리칸 싱크볼 WBS425 (배수구 포함)',
+    name: '백조 싱크볼 / 아메리칸 싱크볼 WBS425 / 배수구 포함 세트',
     price: '190000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/a6e3eaa7d11ea.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=83',
@@ -1563,7 +1558,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '82',
-    name: '아메리칸 싱크볼 WBS628 (배수구 포함)',
+    name: '백조 싱크볼 / 아메리칸 싱크볼 WBS628 / 배수구 포함 세트',
     price: '238000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/d7073b8bd0953.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=82',
@@ -1572,7 +1567,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '81',
-    name: '아메리칸 싱크볼 WBS833 (배수구 포함)',
+    name: '백조 싱크볼 / 아메리칸 싱크볼 WBS833 / 배수구 포함 세트',
     price: '274000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/50d1c0e600d52.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=81',
@@ -1581,7 +1576,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '80',
-    name: '아메리칸 싱크볼 WBD832 (배수구 포함)',
+    name: '백조 싱크볼 / 아메리칸 싱크볼 WBD832 / 배수구 포함 세트',
     price: '367000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/e1f3388bbefa1.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=80',
@@ -1591,7 +1586,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '79',
     name:
-      '법랑씽크볼 Enameled 860 Black (와이어바스켓 + 수세미망 + 배수구 포함)',
+      '백조 싱크볼 / Enameled(법랑) 860 Black / 와이어바스켓 + 수세미망 + 배수구 포함 세트',
     price: '316000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/612c72d5b2200.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=79',
@@ -1601,7 +1596,7 @@ const Sinkbowl: SinkbowlType[] = [
   {
     id: '78',
     name:
-      '법랑씽크볼 Enameled 860 White (와이어바스켓 + 수세미망 + 배수구 포함)',
+      '백조 싱크볼 / Enameled(법랑) 860 White / 와이어바스켓 + 수세미망 + 배수구 포함 세트',
     price: '316000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/3264ba983ab88.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=78',
@@ -1610,7 +1605,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '77',
-    name: '법랑씽크볼 Enameled 540 White (배수구 포함)',
+    name: '백조 싱크볼 / Enameled(법랑) 540 White / 배수구 포함 세트',
     price: '258000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/afa8e870144df.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=77',
@@ -1619,7 +1614,7 @@ const Sinkbowl: SinkbowlType[] = [
   },
   {
     id: '76',
-    name: '법랑씽크볼 Enameled 540 Black (배수구 포함)',
+    name: '백조 싱크볼 / Enameled(법랑) 540 Black / 배수구 포함 세트',
     price: '258000',
     src: 'https://cdn.imweb.me/thumbnail/20210517/7e1d94ee14993.jpg',
     link: 'https://sinkbowl.co.kr/23/?idx=76',
